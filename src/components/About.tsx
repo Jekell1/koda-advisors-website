@@ -106,7 +106,7 @@ const About = () => {
             </p>
           </div>
           
-          {/* Jeff's Profile */}
+          {/* Jeff Profile */}
           <div className="mx-auto mt-16 max-w-7xl">
             <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-3 lg:items-start">
               {/* Profile Info */}
