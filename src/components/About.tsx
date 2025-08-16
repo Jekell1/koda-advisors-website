@@ -46,7 +46,7 @@ const About = () => {
                     Fractional CIO Model.
                   </dt>
                   <dd className="inline">
-                    Get senior technology leadership when you need it, scaled to your organization's requirements and budget.
+                    Get senior technology leadership when you need it, scaled to your organization&apos;s requirements and budget.
                   </dd>
                 </div>
                 <div className="relative pl-9">
