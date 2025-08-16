@@ -15,13 +15,13 @@ const Header = () => {
 
   return (
     <header className="fixed w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
+      <nav className="mx-auto flex max-w-7xl items-end justify-between p-6 lg:px-8">
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
             <img 
               src="/Koda_Advisors_logo.svg" 
               alt="Koda Advisors" 
-              className="h-8 w-auto"
+              style={{ height: '200px', width: 'auto' }}
             />
           </a>
         </div>
@@ -34,21 +34,21 @@ const Header = () => {
             <Menu className="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
-        <div className="hidden lg:flex lg:gap-x-12">
+        <div className="hidden lg:flex lg:gap-x-12 mb-8">
           {navigation.map((item) => (
             <a
               key={item.name}
               href={item.href}
-              className="text-sm font-semibold leading-6 text-gray-900 hover:text-primary-600 transition-colors"
+              className="text-xl font-semibold leading-6 text-gray-900 hover:text-primary-600 transition-colors"
             >
               {item.name}
             </a>
           ))}
         </div>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end mb-8">
           <a
             href="#contact"
-            className="rounded-md bg-primary-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 transition-colors"
+            className="rounded-md bg-primary-600 px-5 py-3.5 text-xl font-semibold text-white shadow-sm hover:bg-primary-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 transition-colors"
           >
             Get Started
           </a>
@@ -81,7 +81,7 @@ const Header = () => {
                   <a
                     key={item.name}
                     href={item.href}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    className="-mx-3 block rounded-lg px-3 py-3 text-xl font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}
@@ -91,7 +91,7 @@ const Header = () => {
               <div className="py-6">
                 <a
                   href="#contact"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-primary-600 hover:bg-gray-50"
+                  className="-mx-3 block rounded-lg px-3 py-3 text-xl font-semibold leading-7 text-primary-600 hover:bg-gray-50"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Get Started

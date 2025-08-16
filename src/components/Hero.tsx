@@ -34,7 +34,7 @@ const Hero = () => {
       </div>
       
       {/* Stats Section */}
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 pb-24">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 pb-24 -mt-40">
         <div className="mx-auto max-w-2xl lg:max-w-none">
           <div className="text-center">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">

@@ -101,31 +101,30 @@ const About = () => {
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Leadership
             </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-              Meet Jeff Childers, CISSP - the strategic technology leader behind Koda Advisors.
+            <p className="mt-6 text-lg leading-8 text-gray-600 whitespace-nowrap">
+              Meet Jeff Childers - the strategic technology leader behind Koda Advisors.
             </p>
           </div>
           
           {/* Jeff's Profile */}
           <div className="mx-auto mt-16 max-w-7xl">
-            <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-3">
+            <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-3 lg:items-start">
               {/* Profile Info */}
               <div className="lg:col-span-1">
-                <div className="bg-white rounded-2xl shadow-sm ring-1 ring-gray-900/10 p-8">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Jeff Childers, CISSP</h3>
-                  <p className="text-primary-600 font-semibold mb-4">Founder & Chief Technology Officer</p>
+                <div className="bg-white rounded-2xl shadow-sm ring-1 ring-gray-900/10 p-8 sticky top-8">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">Jeff Childers, CISSP</h3>
                   <div className="space-y-3 text-sm text-gray-600">
-                    <div className="flex items-center gap-x-2">
+                    <div className="grid grid-cols-3 gap-x-2">
                       <span className="font-medium">Location:</span>
-                      <span>Greenville, SC</span>
+                      <span className="col-span-2">Greenville, SC</span>
                     </div>
-                    <div className="flex items-center gap-x-2">
+                    <div className="grid grid-cols-3 gap-x-2">
                       <span className="font-medium">Education:</span>
-                      <span>BS Computer Engineering, Clemson University</span>
+                      <span className="col-span-2">BS Computer Engineering, Clemson University</span>
                     </div>
-                    <div className="flex items-center gap-x-2">
+                    <div className="grid grid-cols-3 gap-x-2">
                       <span className="font-medium">Certification:</span>
-                      <span>CISSP (Certified Information Systems Security Professional)</span>
+                      <span className="col-span-2">CISSP (Certified Information Systems Security Professional)</span>
                     </div>
                   </div>
                 </div>
@@ -133,57 +132,59 @@ const About = () => {
 
               {/* Experience Details */}
               <div className="lg:col-span-2">
-                <div className="prose prose-gray max-w-none">
-                  <h4 className="text-lg font-semibold text-gray-900 mb-4">Leadership Experience</h4>
-                  <p className="text-gray-600 mb-4">
-                    Jeff Childers brings over 25 years of executive technology leadership experience across diverse industries 
-                    and organizational scales. His expertise spans AI strategy, digital transformation, and enterprise technology 
-                    initiatives that drive measurable business value.
-                  </p>
-                  
-                  <p className="text-gray-600 mb-4">
-                    He started as a software developer and held multiple executive leadership positions including Chief Information Officer, 
-                    guiding organizations through complex technology challenges and strategic initiatives. His approach focuses on 
-                    aligning technology investments with business objectives while maintaining operational excellence and security best practices.
-                  </p>
+                <div className="max-w-none">
+                  <h4 className="text-lg font-semibold text-gray-900 mb-6">Leadership Experience</h4>
+                  <div className="space-y-4 text-gray-600">
+                    <p>
+                      Jeff Childers brings over 25 years of executive technology leadership experience across diverse industries 
+                      and organizational scales. His expertise spans AI strategy, digital transformation, and enterprise technology 
+                      initiatives that drive measurable business value.
+                    </p>
+                    
+                    <p>
+                      He started as a software developer and held multiple executive leadership positions including Chief Information Officer, 
+                      guiding organizations through complex technology challenges and strategic initiatives. His approach focuses on 
+                      aligning technology investments with business objectives while maintaining operational excellence and security best practices.
+                    </p>
 
-                  <p className="text-gray-600 mb-4">
-                    Jeff&apos;s foundation in software development was built during his tenure at Datastream, where he advanced from Software 
-                    Developer to Vice President of Application Development. There he led the design and delivery of mission-critical 
-                    enterprise asset management solutions for Fortune 500 clients across manufacturing, energy, utilities, and industrial 
-                    sectors. Datastream was later acquired by Infor.
-                  </p>
+                    <p>
+                      Jeff&apos;s foundation in software development was built during his tenure at Datastream, where he advanced from Software 
+                      Developer to Vice President of Application Development. There he led the design and delivery of mission-critical 
+                      enterprise asset management solutions for Fortune 500 clients across manufacturing, energy, utilities, and industrial 
+                      sectors. Datastream was later acquired by Infor.
+                    </p>
 
-                  <p className="text-gray-600 mb-4">
-                    His executive leadership experience spans diverse industries including consumer finance, commercial foodservice, 
-                    data center infrastructure, and warehouse management systems. At companies ranging from publicly traded enterprises 
-                    to high-growth technology firms, he has consistently delivered strategic technology transformations that support 
-                    rapid business growth and operational excellence.
-                  </p>
+                    <p>
+                      His executive leadership experience spans diverse industries including consumer finance, commercial foodservice, 
+                      data center infrastructure, and warehouse management systems. At companies ranging from publicly traded enterprises 
+                      to high-growth technology firms, he has consistently delivered strategic technology transformations that support 
+                      rapid business growth and operational excellence.
+                    </p>
 
-                  <p className="text-gray-600 mb-4">
-                    Through roles at Flexential, Foxfire, and as founder of Reliasys Solutions, Jeff refined his ability to translate 
-                    business requirements into actionable technology strategies while managing complex technology portfolios and leading 
-                    high-performing technical teams. His experience includes serving Fortune 500 clients and scaling technology solutions 
-                    across national enterprise footprints.
-                  </p>
+                    <p>
+                      Through roles at Flexential, Foxfire, and as founder of Reliasys Solutions, Jeff refined his ability to translate 
+                      business requirements into actionable technology strategies while managing complex technology portfolios and leading 
+                      high-performing technical teams. His experience includes serving Fortune 500 clients and scaling technology solutions 
+                      across national enterprise footprints.
+                    </p>
 
-                  <p className="text-gray-600 mb-4">
-                    Jeff holds the CISSP (Certified Information Systems Security Professional) certification, one of the most prestigious 
-                    and globally recognized credentials in cybersecurity, demonstrating his expertise in security architecture, risk 
-                    management, and enterprise security governance.
-                  </p>
+                    <p>
+                      Jeff holds the CISSP (Certified Information Systems Security Professional) certification, one of the most prestigious 
+                      and globally recognized credentials in cybersecurity, demonstrating his expertise in security architecture, risk 
+                      management, and enterprise security governance.
+                    </p>
 
-                  <p className="text-gray-600 mb-6">
-                    Jeff&apos;s unique combination of hands-on software development expertise and strategic business acumen enables him to 
-                    bridge the gap between complex technology solutions and executive decision-making. He specializes in 
-                    AI strategy, cybersecurity governance, and building scalable enterprise architectures that position 
-                    organizations for sustained growth and competitive advantage.
-                  </p>
+                    <p>
+                      Jeff&apos;s unique combination of hands-on software development expertise and strategic business acumen enables him to 
+                      bridge the gap between complex technology solutions and executive decision-making. He specializes in 
+                      AI strategy, cybersecurity governance, and building scalable enterprise architectures that position 
+                      organizations for sustained growth and competitive advantage.
+                    </p>
+                  </div>
 
-                  <div className="grid grid-cols-2 gap-4 mt-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
                     <div className="bg-gray-50 rounded-lg p-4">
-                      <h5 className="font-medium text-gray-900 mb-2">Core Expertise</h5>
+                      <h5 className="font-medium text-gray-900 mb-3">Core Expertise</h5>
                       <ul className="text-sm text-gray-600 space-y-1">
                         <li>• AI Strategy & Implementation</li>
                         <li>• Digital Transformation Leadership</li>
@@ -192,7 +193,7 @@ const About = () => {
                       </ul>
                     </div>
                     <div className="bg-gray-50 rounded-lg p-4">
-                      <h5 className="font-medium text-gray-900 mb-2">Key Achievements</h5>
+                      <h5 className="font-medium text-gray-900 mb-3">Key Achievements</h5>
                       <ul className="text-sm text-gray-600 space-y-1">
                         <li>• Strategic Technology Leadership</li>
                         <li>• Digital Transformation Expertise</li>
