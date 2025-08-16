@@ -22,21 +22,21 @@ const Footer = () => {
             </div>
             <div className="flex space-x-6">
               <a
-                href="mailto:info@kodaadvisors.com"
+                href="mailto:jeff@kodaadvisors.com"
                 className="text-gray-400 hover:text-gray-300 transition-colors"
               >
                 <span className="sr-only">Email</span>
                 <Mail className="h-6 w-6" />
               </a>
               <a
-                href="tel:+1234567890"
+                href="tel:+18649189162"
                 className="text-gray-400 hover:text-gray-300 transition-colors"
               >
                 <span className="sr-only">Phone</span>
                 <Phone className="h-6 w-6" />
               </a>
               <a
-                href="https://linkedin.com/company/kodaadvisors"
+                href="https://linkedin.com/in/jeffchilders1"
                 className="text-gray-400 hover:text-gray-300 transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"

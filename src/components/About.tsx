@@ -95,53 +95,149 @@ const About = () => {
           </div>
         </div>
 
-        {/* Team Section */}
+        {/* Leadership Section */}
         <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Leadership Team
+              Leadership
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Experienced technology executives with a proven track record of driving enterprise value through strategic technology initiatives.
+              Meet Jeff Childers, CISSP - the strategic technology leader behind Koda Advisors.
             </p>
           </div>
-          <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-            <article className="flex flex-col items-start">
-              <div className="flex items-center gap-x-4 text-xs">
-                <span className="text-gray-500">Chief Technology Officer</span>
-                <span className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600">
-                  Leadership
-                </span>
+          
+          {/* Jeff's Profile */}
+          <div className="mx-auto mt-16 max-w-7xl">
+            <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-3">
+              {/* Profile Info */}
+              <div className="lg:col-span-1">
+                <div className="bg-white rounded-2xl shadow-sm ring-1 ring-gray-900/10 p-8">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Jeff Childers, CISSP</h3>
+                  <p className="text-primary-600 font-semibold mb-4">Founder & Chief Technology Officer</p>
+                  <div className="space-y-3 text-sm text-gray-600">
+                    <div className="flex items-center gap-x-2">
+                      <span className="font-medium">Location:</span>
+                      <span>Greenville, SC</span>
+                    </div>
+                    <div className="flex items-center gap-x-2">
+                      <span className="font-medium">Education:</span>
+                      <span>BS Computer Engineering, Clemson University</span>
+                    </div>
+                    <div className="flex items-center gap-x-2">
+                      <span className="font-medium">Certification:</span>
+                      <span>CISSP (Certified Information Systems Security Professional)</span>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="group relative">
-                <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900">
-                  Executive Technology Leadership
-                </h3>
-                <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">
-                  Our leadership team brings decades of experience in technology strategy, digital transformation, 
-                  and organizational change management. We work closely with CEOs, boards, and executive teams to 
-                  ensure technology initiatives align with business objectives and deliver measurable value.
-                </p>
+
+              {/* Experience Details */}
+              <div className="lg:col-span-2">
+                <div className="prose prose-gray max-w-none">
+                  <h4 className="text-lg font-semibold text-gray-900 mb-4">Executive Summary</h4>
+                  <p className="text-gray-600 mb-6">
+                    Modern CIO and digital transformation leader focused on building future-ready enterprises through 
+                    cloud-first architecture, AI/ML adoption, and secure, scalable systems. Known for accelerating 
+                    innovation, reducing operational complexity, and aligning technology strategy with bold business outcomes.
+                  </p>
+
+                  <h4 className="text-lg font-semibold text-gray-900 mb-4">Career Highlights</h4>
+                  <ul className="space-y-3 text-gray-600">
+                    <li className="flex gap-x-3">
+                      <CheckCircle className="mt-1 h-4 w-4 flex-none text-primary-600" />
+                      <span>Directed modernization of a 20-year-old financial platform using AI, potentially resulting in $2.5M in development cost savings and 90% reduction in technical debt</span>
+                    </li>
+                    <li className="flex gap-x-3">
+                      <CheckCircle className="mt-1 h-4 w-4 flex-none text-primary-600" />
+                      <span>Supported 5X company growth with scalable enterprise architecture, advanced analytics, and intelligent automation</span>
+                    </li>
+                    <li className="flex gap-x-3">
+                      <CheckCircle className="mt-1 h-4 w-4 flex-none text-primary-600" />
+                      <span>Led 40+ successful M&A integrations with zero downtime, full data integrity, and industry compliance (NIST, ISO 27001)</span>
+                    </li>
+                    <li className="flex gap-x-3">
+                      <CheckCircle className="mt-1 h-4 w-4 flex-none text-primary-600" />
+                      <span>Scaled global software engineering organization from startup to $120M in annual revenue, leading 120+ professionals</span>
+                    </li>
+                    <li className="flex gap-x-3">
+                      <CheckCircle className="mt-1 h-4 w-4 flex-none text-primary-600" />
+                      <span>Achieved $12M in cumulative cost savings via cloud transformation, automation, and IT consolidation across 40+ locations</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
-            </article>
-            <article className="flex flex-col items-start">
-              <div className="flex items-center gap-x-4 text-xs">
-                <span className="text-gray-500">Strategic Advisory</span>
-                <span className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600">
-                  Innovation
-                </span>
+            </div>
+
+            {/* Experience Timeline */}
+            <div className="mt-16">
+              <h4 className="text-lg font-semibold text-gray-900 mb-8">Professional Experience</h4>
+              <div className="space-y-8">
+                {/* World Acceptance Corporation */}
+                <div className="border-l-2 border-primary-200 pl-6">
+                  <div className="flex items-center gap-x-4 mb-2">
+                    <span className="bg-primary-600 w-3 h-3 rounded-full -ml-7 border-2 border-white"></span>
+                    <h5 className="text-base font-semibold text-gray-900">Director of Artificial Intelligence & Cognitive Services</h5>
+                    <span className="text-sm text-gray-500">2025 – Current</span>
+                  </div>
+                  <p className="text-sm font-medium text-primary-600 mb-2">World Acceptance Corporation (Publicly Traded)</p>
+                  <p className="text-sm text-gray-600">
+                    Leading AI modernization initiatives for a consumer finance company with 1,024 branches across 16 states. 
+                    Architected Azure OpenAI solutions, enterprise chatbots, and AI-powered analytics platforms.
+                  </p>
+                </div>
+
+                {/* Tech 24 */}
+                <div className="border-l-2 border-primary-200 pl-6">
+                  <div className="flex items-center gap-x-4 mb-2">
+                    <span className="bg-primary-600 w-3 h-3 rounded-full -ml-7 border-2 border-white"></span>
+                    <h5 className="text-base font-semibold text-gray-900">Chief Information Officer</h5>
+                    <span className="text-sm text-gray-500">2017 – 2025</span>
+                  </div>
+                  <p className="text-sm font-medium text-primary-600 mb-2">Tech 24 ($300M Organization)</p>
+                  <p className="text-sm text-gray-600">
+                    Spearheaded enterprise technology operations for leading foodservice equipment repair company. 
+                    Directed 5X company growth through scalable cloud solutions and led 40+ M&A integrations.
+                  </p>
+                </div>
+
+                {/* Flexential */}
+                <div className="border-l-2 border-primary-200 pl-6">
+                  <div className="flex items-center gap-x-4 mb-2">
+                    <span className="bg-primary-600 w-3 h-3 rounded-full -ml-7 border-2 border-white"></span>
+                    <h5 className="text-base font-semibold text-gray-900">VP, Software Development & IT</h5>
+                    <span className="text-sm text-gray-500">2015 – 2017</span>
+                  </div>
+                  <p className="text-sm font-medium text-primary-600 mb-2">Flexential (4,200+ National Customers)</p>
+                  <p className="text-sm text-gray-600">
+                    Directed enterprise IT strategy across 41 data centers, managing $5M annual budget and 50-member team. 
+                    Drove cloud transformation and infrastructure modernization initiatives.
+                  </p>
+                </div>
               </div>
-              <div className="group relative">
-                <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900">
-                  Innovation & Strategy Focus
-                </h3>
-                <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">
-                  We stay at the forefront of emerging technologies including AI, cloud computing, and cybersecurity. 
-                  Our strategic approach ensures organizations can leverage new technologies effectively while 
-                  managing risk and maximizing return on investment.
-                </p>
+            </div>
+
+            {/* Technical Expertise */}
+            <div className="mt-16">
+              <h4 className="text-lg font-semibold text-gray-900 mb-6">Technical Expertise</h4>
+              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                <div className="bg-gray-50 rounded-lg p-4">
+                  <h5 className="font-medium text-gray-900 mb-2">AI & Data Science</h5>
+                  <p className="text-xs text-gray-600">Azure Cognitive Services, OpenAI API, Neo4j, MLOps, Power BI</p>
+                </div>
+                <div className="bg-gray-50 rounded-lg p-4">
+                  <h5 className="font-medium text-gray-900 mb-2">Cloud Platforms</h5>
+                  <p className="text-xs text-gray-600">Microsoft Azure, AWS, Cloud-Native Architecture</p>
+                </div>
+                <div className="bg-gray-50 rounded-lg p-4">
+                  <h5 className="font-medium text-gray-900 mb-2">Enterprise Software</h5>
+                  <p className="text-xs text-gray-600">SAP, Salesforce, ServiceNow, Microsoft GP</p>
+                </div>
+                <div className="bg-gray-50 rounded-lg p-4">
+                  <h5 className="font-medium text-gray-900 mb-2">Cybersecurity</h5>
+                  <p className="text-xs text-gray-600">CISSP, NIST, SOC 2, ISO 27001, Zero Trust</p>
+                </div>
               </div>
-            </article>
+            </div>
           </div>
         </div>
       </div>

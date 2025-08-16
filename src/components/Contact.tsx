@@ -56,8 +56,8 @@ const Contact = () => {
                 <div>
                   <h4 className="text-sm font-semibold leading-6 text-gray-900">Email</h4>
                   <p className="text-sm leading-6 text-gray-600">
-                    <a href="mailto:info@kodaadvisors.com" className="hover:text-primary-600">
-                      info@kodaadvisors.com
+                    <a href="mailto:jeff@kodaadvisors.com" className="hover:text-primary-600">
+                      jeff@kodaadvisors.com
                     </a>
                   </p>
                 </div>
@@ -69,8 +69,8 @@ const Contact = () => {
                 <div>
                   <h4 className="text-sm font-semibold leading-6 text-gray-900">Phone</h4>
                   <p className="text-sm leading-6 text-gray-600">
-                    <a href="tel:+1234567890" className="hover:text-primary-600">
-                      (123) 456-7890
+                    <a href="tel:+18649189162" className="hover:text-primary-600">
+                      (864) 918-9162
                     </a>
                   </p>
                 </div>
@@ -82,7 +82,7 @@ const Contact = () => {
                 <div>
                   <h4 className="text-sm font-semibold leading-6 text-gray-900">Location</h4>
                   <p className="text-sm leading-6 text-gray-600">
-                    Serving clients nationwide
+                    Greenville, SC | Serving clients nationwide
                   </p>
                 </div>
               </div>
