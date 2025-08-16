@@ -19,7 +19,7 @@ const Header = () => {
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
             <img 
-              src="/Koda_Advisors_logo.svg" 
+              src="/Koda_Advisors_Logo.svg" 
               alt="Koda Advisors" 
               style={{ height: '200px', width: 'auto' }}
             />
