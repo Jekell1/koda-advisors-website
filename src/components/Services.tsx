@@ -1,3 +1,5 @@
+'use client'
+
 import { 
   Users, 
   Brain, 
@@ -9,6 +11,13 @@ import {
 } from 'lucide-react'
 
 const Services = () => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }
+
   const services = [
     {
       icon: Users,
@@ -85,58 +94,61 @@ const Services = () => {
   ]
 
   return (
-    <section id="services" className="py-24 bg-gray-50 scroll-mt-64">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Comprehensive Technology Leadership Services
-          </h2>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
-            Strategic technology expertise across all areas of enterprise IT, from AI implementation 
-            to cybersecurity, M&A due diligence to cost optimization.
-          </p>
-        </div>
-        <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:gap-8">
-          {services.map((service, index) => {
-            const IconComponent = service.icon
-            return (
-              <div
-                key={index}
-                className="flex flex-col rounded-2xl bg-white p-8 shadow-sm ring-1 ring-gray-900/10 hover:shadow-lg transition-shadow"
-              >
-                <div className="flex items-center gap-x-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary-600">
-                    <IconComponent className="h-6 w-6 text-white" />
+    <>
+      <div className="wave-divider-white"></div>
+      <section id="services" className="-mt-4 pb-24 bg-white scroll-mt-64">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-3xl font-heading font-bold tracking-tight text-steel-900 sm:text-4xl">
+              Comprehensive Technology Leadership Services
+            </h2>
+            <p className="mt-6 text-lg leading-8 text-steel-600 font-body">
+              Strategic technology expertise across all areas of enterprise IT, from AI implementation 
+              to cybersecurity, M&A due diligence to cost optimization.
+            </p>
+          </div>
+          <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:gap-8">
+            {services.map((service, index) => {
+              const IconComponent = service.icon
+              return (
+                <div
+                  key={index}
+                  className="flex flex-col rounded-2xl bg-executive-card p-8 shadow-executive ring-1 ring-steel-200 hover:shadow-executive-hover transition-all group"
+                >
+                  <div className="flex items-center gap-x-4">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-accent group-hover:scale-110 transition-transform">
+                      <IconComponent className="h-8 w-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-heading font-semibold leading-8 text-steel-900">
+                      {service.title}
+                    </h3>
                   </div>
-                  <h3 className="text-xl font-semibold leading-8 text-gray-900">
-                    {service.title}
-                  </h3>
+                  <p className="mt-4 text-base leading-7 text-steel-600 font-body">
+                    {service.description}
+                  </p>
+                  <ul className="mt-6 space-y-3">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex gap-x-3">
+                        <ArrowRight className="mt-1 h-4 w-4 flex-none text-primary-600" />
+                        <span className="text-sm leading-6 text-steel-600 font-body">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <p className="mt-4 text-base leading-7 text-gray-600">
-                  {service.description}
-                </p>
-                <ul className="mt-6 space-y-3">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex gap-x-3">
-                      <ArrowRight className="mt-1 h-4 w-4 flex-none text-primary-600" />
-                      <span className="text-sm leading-6 text-gray-600">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )
-          })}
+              )
+            })}
+          </div>
+          <div className="mt-16 text-center">
+            <button
+              onClick={() => scrollToSection('contact')}
+              className="btn-executive"
+            >
+              Discuss Your Technology Needs
+            </button>
+          </div>
         </div>
-        <div className="mt-16 text-center">
-          <a
-            href="#contact"
-            className="rounded-md bg-primary-600 px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-primary-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 transition-all hover:scale-105"
-          >
-            Discuss Your Technology Needs
-          </a>
-        </div>
-      </div>
-    </section>
+      </section>
+    </>
   )
 }
 

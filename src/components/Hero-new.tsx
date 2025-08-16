@@ -1,18 +1,8 @@
 'use client'
 
-import { ArrowRight, Shield, Bot, Zap, Users } from 'lucide-react'
+import { ArrowRight, Shield, Brain, Zap, Users } from 'lucide-react'
 
 const Hero = () => {
-  const scrollToSection = (sectionId: string) => {
-    console.log(`Scrolling to: ${sectionId}`)
-    const element = document.getElementById(sectionId)
-    if (element) {
-      const yOffset = -160 // Offset for fixed header
-      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset
-      window.scrollTo({top: y, behavior: 'smooth'})
-    }
-  }
-
   return (
     <section id="home" className="relative isolate px-6 pt-14 lg:px-8 scroll-mt-64 hero-pattern">
       {/* Enhanced Background Elements */}
@@ -23,7 +13,7 @@ const Hero = () => {
       {/* Circuit Pattern Overlay */}
       <div className="absolute inset-0 -z-5 bg-circuit-pattern opacity-30" style={{backgroundSize: '60px 60px'}}></div>
       
-      <div className="mx-auto max-w-7xl pt-32 pb-16 sm:pt-48 sm:pb-20 lg:pt-56 lg:pb-24">
+      <div className="mx-auto max-w-7xl py-32 sm:py-48 lg:py-56">
         <div className="text-center">
           <h1 className="font-heading text-4xl font-black tracking-tight text-steel-900 sm:text-6xl lg:text-7xl">
             <span className="gradient-text">Fractional CIO & AI Transformation Partner</span>
@@ -36,18 +26,16 @@ const Hero = () => {
           </p>
           
           {/* Enhanced CTA */}
-          <div className="mt-10 flex items-center justify-center gap-x-6 relative z-50">
+          <div className="mt-10 flex items-center justify-center gap-x-6">
             <a
               href="#contact"
-              onClick={(e) => {
-                e.preventDefault()
-                scrollToSection('contact')
-              }}
-              className="btn-executive inline-flex items-center gap-2 relative z-50"
-              style={{position: 'relative', zIndex: 9999, pointerEvents: 'auto'}}
+              className="rounded-md bg-slate-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-slate-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-600 transition-all duration-200 inline-flex items-center"
             >
               Schedule Strategic Consultation
-              <ArrowRight className="h-4 w-4" />
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </a>
+            <a href="#about" className="text-sm font-semibold leading-6 text-steel-900 hover:text-slate-600 transition-colors">
+              Learn about my approach <span aria-hidden="true">→</span>
             </a>
           </div>
         </div>
@@ -55,41 +43,41 @@ const Hero = () => {
         {/* Enhanced Stats Section */}
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-4 lg:gap-y-16">
-            <div className="relative flex flex-col items-center justify-center text-center rounded-2xl bg-gradient-to-br from-white via-white to-gray-50 px-6 py-8 shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-gray-200/50 hover:shadow-[0_20px_40px_rgb(0,0,0,0.15)] hover:-translate-y-1 transition-all duration-300 backdrop-blur-sm">
+            <div className="relative flex flex-col items-center rounded-2xl bg-white/80 backdrop-blur-sm px-6 py-8 shadow-lg border border-steel-200">
               <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                <div className="bg-gradient-to-br from-slate-600 to-slate-700 rounded-full p-3 shadow-[0_8px_25px_rgba(71,85,105,0.3)]">
+                <div className="bg-slate-600 rounded-full p-3 shadow-lg">
                   <Shield className="h-5 w-5 text-white" />
                 </div>
               </div>
-              <dd className="text-3xl font-black tracking-tight text-steel-900 font-heading mb-2">$50M+</dd>
-              <dt className="text-base leading-7 text-steel-600 font-body-medium">Portfolio Value Protected</dt>
+              <dt className="text-base leading-7 text-steel-600 font-body-medium mt-4">Portfolio Value Protected</dt>
+              <dd className="order-first text-3xl font-black tracking-tight text-steel-900 font-heading">$50M+</dd>
             </div>
-            <div className="relative flex flex-col items-center justify-center text-center rounded-2xl bg-gradient-to-br from-white via-white to-gray-50 px-6 py-8 shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-gray-200/50 hover:shadow-[0_20px_40px_rgb(0,0,0,0.15)] hover:-translate-y-1 transition-all duration-300 backdrop-blur-sm">
+            <div className="relative flex flex-col items-center rounded-2xl bg-white/80 backdrop-blur-sm px-6 py-8 shadow-lg border border-steel-200">
               <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                <div className="bg-gradient-to-br from-slate-600 to-slate-700 rounded-full p-3 shadow-[0_8px_25px_rgba(71,85,105,0.3)]">
-                  <Bot className="h-5 w-5 text-white" />
+                <div className="bg-slate-600 rounded-full p-3 shadow-lg">
+                  <Brain className="h-5 w-5 text-white" />
                 </div>
               </div>
-              <dd className="text-3xl font-black tracking-tight text-steel-900 font-heading mb-2">40+</dd>
-              <dt className="text-base leading-7 text-steel-600 font-body-medium">AI Implementations</dt>
+              <dt className="text-base leading-7 text-steel-600 font-body-medium mt-4">AI Implementations</dt>
+              <dd className="order-first text-3xl font-black tracking-tight text-steel-900 font-heading">40+</dd>
             </div>
-            <div className="relative flex flex-col items-center justify-center text-center rounded-2xl bg-gradient-to-br from-white via-white to-gray-50 px-6 py-8 shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-gray-200/50 hover:shadow-[0_20px_40px_rgb(0,0,0,0.15)] hover:-translate-y-1 transition-all duration-300 backdrop-blur-sm">
+            <div className="relative flex flex-col items-center rounded-2xl bg-white/80 backdrop-blur-sm px-6 py-8 shadow-lg border border-steel-200">
               <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                <div className="bg-gradient-to-br from-slate-600 to-slate-700 rounded-full p-3 shadow-[0_8px_25px_rgba(71,85,105,0.3)]">
+                <div className="bg-slate-600 rounded-full p-3 shadow-lg">
                   <Zap className="h-5 w-5 text-white" />
                 </div>
               </div>
-              <dd className="text-3xl font-black tracking-tight text-steel-900 font-heading mb-2">25+</dd>
-              <dt className="text-base leading-7 text-steel-600 font-body-medium">Digital Transformations</dt>
+              <dt className="text-base leading-7 text-steel-600 font-body-medium mt-4">Digital Transformations</dt>
+              <dd className="order-first text-3xl font-black tracking-tight text-steel-900 font-heading">25+</dd>
             </div>
-            <div className="relative flex flex-col items-center justify-center text-center rounded-2xl bg-gradient-to-br from-white via-white to-gray-50 px-6 py-8 shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-gray-200/50 hover:shadow-[0_20px_40px_rgb(0,0,0,0.15)] hover:-translate-y-1 transition-all duration-300 backdrop-blur-sm">
+            <div className="relative flex flex-col items-center rounded-2xl bg-white/80 backdrop-blur-sm px-6 py-8 shadow-lg border border-steel-200">
               <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                <div className="bg-gradient-to-br from-slate-600 to-slate-700 rounded-full p-3 shadow-[0_8px_25px_rgba(71,85,105,0.3)]">
+                <div className="bg-slate-600 rounded-full p-3 shadow-lg">
                   <Users className="h-5 w-5 text-white" />
                 </div>
               </div>
-              <dd className="text-3xl font-black tracking-tight text-steel-900 font-heading mb-2">15+</dd>
-              <dt className="text-base leading-7 text-steel-600 font-body-medium">Years Experience</dt>
+              <dt className="text-base leading-7 text-steel-600 font-body-medium mt-4">Years Experience</dt>
+              <dd className="order-first text-3xl font-black tracking-tight text-steel-900 font-heading">15+</dd>
             </div>
           </dl>
         </div>
