@@ -10,12 +10,49 @@ const Contact = () => {
     company: '',
     message: ''
   })
+  
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission here
-    console.log('Form submitted:', formData)
-    // You can integrate with your preferred form handling service
+    setIsSubmitting(true)
+    setSubmitStatus('idle')
+    
+    try {
+      // Submit to Formspree
+      const response = await fetch('https://formspree.io/f/mdkdvobe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          company: formData.company,
+          message: formData.message,
+        }),
+      })
+      
+      if (response.ok) {
+        setSubmitStatus('success')
+        // Reset form after successful submission
+        setFormData({
+          name: '',
+          email: '',
+          company: '',
+          message: ''
+        })
+      } else {
+        throw new Error('Form submission failed')
+      }
+      
+    } catch (error) {
+      console.error('Form submission error:', error)
+      setSubmitStatus('error')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -155,12 +192,31 @@ const Contact = () => {
                 />
               </div>
             </div>
+            
+            {/* Status Messages */}
+            {submitStatus === 'success' && (
+              <div className="rounded-md bg-green-50 p-4">
+                <div className="text-sm text-green-700">
+                  Thank you! Your message has been sent successfully. We'll get back to you soon.
+                </div>
+              </div>
+            )}
+            
+            {submitStatus === 'error' && (
+              <div className="rounded-md bg-red-50 p-4">
+                <div className="text-sm text-red-700">
+                  There was an error sending your message. Please try again or contact us directly at info@kodaadvisors.com
+                </div>
+              </div>
+            )}
+            
             <div>
               <button
                 type="submit"
-                className="flex w-full items-center justify-center gap-x-2 rounded-md bg-primary-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-primary-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 transition-all hover:scale-105"
+                disabled={isSubmitting}
+                className="flex w-full items-center justify-center gap-x-2 rounded-md bg-primary-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-primary-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 transition-all hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
               >
-                Send Message
+                {isSubmitting ? 'Sending...' : 'Send Message'}
                 <Send className="h-4 w-4" />
               </button>
             </div>
