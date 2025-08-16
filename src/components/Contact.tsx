@@ -197,7 +197,7 @@ const Contact = () => {
             {submitStatus === 'success' && (
               <div className="rounded-md bg-green-50 p-4">
                 <div className="text-sm text-green-700">
-                  Thank you! Your message has been sent successfully. We'll get back to you soon.
+                  Thank you! Your message has been sent successfully. We&apos;ll get back to you soon.
                 </div>
               </div>
             )}
