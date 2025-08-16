@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import Image from 'next/image'
 import { Menu, X } from 'lucide-react'
 
 const Header = () => {
@@ -19,11 +18,9 @@ const Header = () => {
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
-            <Image 
-              src="/husky-logo-2.png" 
+            <img 
+              src="/Koda_Advisors_logo.svg" 
               alt="Koda Advisors" 
-              width={32}
-              height={32}
               className="h-8 w-auto"
             />
           </a>
