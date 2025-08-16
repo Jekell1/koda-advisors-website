@@ -136,21 +136,46 @@ const About = () => {
                 <div className="prose prose-gray max-w-none">
                   <h4 className="text-lg font-semibold text-gray-900 mb-4">Leadership Experience</h4>
                   <p className="text-gray-600 mb-4">
-                    Jeff Childers brings over 15 years of executive technology leadership experience, currently serving as 
-                    Director of Artificial Intelligence & Cognitive Services at World Acceptance Corporation. His expertise 
-                    spans AI modernization, cloud transformation, and enterprise-scale digital initiatives that drive 
-                    measurable business value.
+                    Jeff Childers brings over 25 years of executive technology leadership experience across diverse industries 
+                    and organizational scales. His expertise spans AI strategy, digital transformation, and enterprise technology 
+                    initiatives that drive measurable business value.
                   </p>
                   
                   <p className="text-gray-600 mb-4">
-                    As former CIO of Tech 24, Jeff spearheaded the technology operations for a $300M organization, leading 
-                    40+ successful M&A integrations and achieving $12M in cumulative cost savings through strategic cloud 
-                    transformation. His leadership supported 5X company growth while maintaining zero downtime across all 
-                    technology initiatives.
+                    He started as a software developer and held multiple executive leadership positions including Chief Information Officer, 
+                    guiding organizations through complex technology challenges and strategic initiatives. His approach focuses on 
+                    aligning technology investments with business objectives while maintaining operational excellence and security best practices.
+                  </p>
+
+                  <p className="text-gray-600 mb-4">
+                    Jeff&apos;s foundation in software development was built during his tenure at Datastream, where he advanced from Software 
+                    Developer to Vice President of Application Development. There he led the design and delivery of mission-critical 
+                    enterprise asset management solutions for Fortune 500 clients across manufacturing, energy, utilities, and industrial 
+                    sectors. Datastream was later acquired by Infor.
+                  </p>
+
+                  <p className="text-gray-600 mb-4">
+                    His executive leadership experience spans diverse industries including consumer finance, commercial foodservice, 
+                    data center infrastructure, and warehouse management systems. At companies ranging from publicly traded enterprises 
+                    to high-growth technology firms, he has consistently delivered strategic technology transformations that support 
+                    rapid business growth and operational excellence.
+                  </p>
+
+                  <p className="text-gray-600 mb-4">
+                    Through roles at Flexential, Foxfire, and as founder of Reliasys Solutions, Jeff refined his ability to translate 
+                    business requirements into actionable technology strategies while managing complex technology portfolios and leading 
+                    high-performing technical teams. His experience includes serving Fortune 500 clients and scaling technology solutions 
+                    across national enterprise footprints.
+                  </p>
+
+                  <p className="text-gray-600 mb-4">
+                    Jeff holds the CISSP (Certified Information Systems Security Professional) certification, one of the most prestigious 
+                    and globally recognized credentials in cybersecurity, demonstrating his expertise in security architecture, risk 
+                    management, and enterprise security governance.
                   </p>
 
                   <p className="text-gray-600 mb-6">
-                    Jeff&apos;s unique combination of hands-on technical expertise and strategic business acumen enables him to 
+                    Jeff&apos;s unique combination of hands-on software development expertise and strategic business acumen enables him to 
                     bridge the gap between complex technology solutions and executive decision-making. He specializes in 
                     AI strategy, cybersecurity governance, and building scalable enterprise architectures that position 
                     organizations for sustained growth and competitive advantage.
@@ -169,10 +194,10 @@ const About = () => {
                     <div className="bg-gray-50 rounded-lg p-4">
                       <h5 className="font-medium text-gray-900 mb-2">Key Achievements</h5>
                       <ul className="text-sm text-gray-600 space-y-1">
-                        <li>• $12M+ in cost savings delivered</li>
-                        <li>• 40+ M&A integrations completed</li>
-                        <li>• CISSP certified professional</li>
-                        <li>• 5X company growth supported</li>
+                        <li>• Strategic Technology Leadership</li>
+                        <li>• Digital Transformation Expertise</li>
+                        <li>• AI & Cloud Architecture</li>
+                        <li>• Cybersecurity & Risk Management</li>
                       </ul>
                     </div>
                   </div>
