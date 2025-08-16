@@ -134,107 +134,48 @@ const About = () => {
               {/* Experience Details */}
               <div className="lg:col-span-2">
                 <div className="prose prose-gray max-w-none">
-                  <h4 className="text-lg font-semibold text-gray-900 mb-4">Executive Summary</h4>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-4">Leadership Experience</h4>
+                  <p className="text-gray-600 mb-4">
+                    Jeff Childers brings over 15 years of executive technology leadership experience, currently serving as 
+                    Director of Artificial Intelligence & Cognitive Services at World Acceptance Corporation. His expertise 
+                    spans AI modernization, cloud transformation, and enterprise-scale digital initiatives that drive 
+                    measurable business value.
+                  </p>
+                  
+                  <p className="text-gray-600 mb-4">
+                    As former CIO of Tech 24, Jeff spearheaded the technology operations for a $300M organization, leading 
+                    40+ successful M&A integrations and achieving $12M in cumulative cost savings through strategic cloud 
+                    transformation. His leadership supported 5X company growth while maintaining zero downtime across all 
+                    technology initiatives.
+                  </p>
+
                   <p className="text-gray-600 mb-6">
-                    Modern CIO and digital transformation leader focused on building future-ready enterprises through 
-                    cloud-first architecture, AI/ML adoption, and secure, scalable systems. Known for accelerating 
-                    innovation, reducing operational complexity, and aligning technology strategy with bold business outcomes.
+                    Jeff&apos;s unique combination of hands-on technical expertise and strategic business acumen enables him to 
+                    bridge the gap between complex technology solutions and executive decision-making. He specializes in 
+                    AI strategy, cybersecurity governance, and building scalable enterprise architectures that position 
+                    organizations for sustained growth and competitive advantage.
                   </p>
 
-                  <h4 className="text-lg font-semibold text-gray-900 mb-4">Career Highlights</h4>
-                  <ul className="space-y-3 text-gray-600">
-                    <li className="flex gap-x-3">
-                      <CheckCircle className="mt-1 h-4 w-4 flex-none text-primary-600" />
-                      <span>Directed modernization of a 20-year-old financial platform using AI, potentially resulting in $2.5M in development cost savings and 90% reduction in technical debt</span>
-                    </li>
-                    <li className="flex gap-x-3">
-                      <CheckCircle className="mt-1 h-4 w-4 flex-none text-primary-600" />
-                      <span>Supported 5X company growth with scalable enterprise architecture, advanced analytics, and intelligent automation</span>
-                    </li>
-                    <li className="flex gap-x-3">
-                      <CheckCircle className="mt-1 h-4 w-4 flex-none text-primary-600" />
-                      <span>Led 40+ successful M&A integrations with zero downtime, full data integrity, and industry compliance (NIST, ISO 27001)</span>
-                    </li>
-                    <li className="flex gap-x-3">
-                      <CheckCircle className="mt-1 h-4 w-4 flex-none text-primary-600" />
-                      <span>Scaled global software engineering organization from startup to $120M in annual revenue, leading 120+ professionals</span>
-                    </li>
-                    <li className="flex gap-x-3">
-                      <CheckCircle className="mt-1 h-4 w-4 flex-none text-primary-600" />
-                      <span>Achieved $12M in cumulative cost savings via cloud transformation, automation, and IT consolidation across 40+ locations</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            {/* Experience Timeline */}
-            <div className="mt-16">
-              <h4 className="text-lg font-semibold text-gray-900 mb-8">Professional Experience</h4>
-              <div className="space-y-8">
-                {/* World Acceptance Corporation */}
-                <div className="border-l-2 border-primary-200 pl-6">
-                  <div className="flex items-center gap-x-4 mb-2">
-                    <span className="bg-primary-600 w-3 h-3 rounded-full -ml-7 border-2 border-white"></span>
-                    <h5 className="text-base font-semibold text-gray-900">Director of Artificial Intelligence & Cognitive Services</h5>
-                    <span className="text-sm text-gray-500">2025 – Current</span>
+                  <div className="grid grid-cols-2 gap-4 mt-6">
+                    <div className="bg-gray-50 rounded-lg p-4">
+                      <h5 className="font-medium text-gray-900 mb-2">Core Expertise</h5>
+                      <ul className="text-sm text-gray-600 space-y-1">
+                        <li>• AI Strategy & Implementation</li>
+                        <li>• Digital Transformation Leadership</li>
+                        <li>• M&A Technology Integration</li>
+                        <li>• Enterprise Cloud Architecture</li>
+                      </ul>
+                    </div>
+                    <div className="bg-gray-50 rounded-lg p-4">
+                      <h5 className="font-medium text-gray-900 mb-2">Key Achievements</h5>
+                      <ul className="text-sm text-gray-600 space-y-1">
+                        <li>• $12M+ in cost savings delivered</li>
+                        <li>• 40+ M&A integrations completed</li>
+                        <li>• CISSP certified professional</li>
+                        <li>• 5X company growth supported</li>
+                      </ul>
+                    </div>
                   </div>
-                  <p className="text-sm font-medium text-primary-600 mb-2">World Acceptance Corporation (Publicly Traded)</p>
-                  <p className="text-sm text-gray-600">
-                    Leading AI modernization initiatives for a consumer finance company with 1,024 branches across 16 states. 
-                    Architected Azure OpenAI solutions, enterprise chatbots, and AI-powered analytics platforms.
-                  </p>
-                </div>
-
-                {/* Tech 24 */}
-                <div className="border-l-2 border-primary-200 pl-6">
-                  <div className="flex items-center gap-x-4 mb-2">
-                    <span className="bg-primary-600 w-3 h-3 rounded-full -ml-7 border-2 border-white"></span>
-                    <h5 className="text-base font-semibold text-gray-900">Chief Information Officer</h5>
-                    <span className="text-sm text-gray-500">2017 – 2025</span>
-                  </div>
-                  <p className="text-sm font-medium text-primary-600 mb-2">Tech 24 ($300M Organization)</p>
-                  <p className="text-sm text-gray-600">
-                    Spearheaded enterprise technology operations for leading foodservice equipment repair company. 
-                    Directed 5X company growth through scalable cloud solutions and led 40+ M&A integrations.
-                  </p>
-                </div>
-
-                {/* Flexential */}
-                <div className="border-l-2 border-primary-200 pl-6">
-                  <div className="flex items-center gap-x-4 mb-2">
-                    <span className="bg-primary-600 w-3 h-3 rounded-full -ml-7 border-2 border-white"></span>
-                    <h5 className="text-base font-semibold text-gray-900">VP, Software Development & IT</h5>
-                    <span className="text-sm text-gray-500">2015 – 2017</span>
-                  </div>
-                  <p className="text-sm font-medium text-primary-600 mb-2">Flexential (4,200+ National Customers)</p>
-                  <p className="text-sm text-gray-600">
-                    Directed enterprise IT strategy across 41 data centers, managing $5M annual budget and 50-member team. 
-                    Drove cloud transformation and infrastructure modernization initiatives.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Technical Expertise */}
-            <div className="mt-16">
-              <h4 className="text-lg font-semibold text-gray-900 mb-6">Technical Expertise</h4>
-              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-                <div className="bg-gray-50 rounded-lg p-4">
-                  <h5 className="font-medium text-gray-900 mb-2">AI & Data Science</h5>
-                  <p className="text-xs text-gray-600">Azure Cognitive Services, OpenAI API, Neo4j, MLOps, Power BI</p>
-                </div>
-                <div className="bg-gray-50 rounded-lg p-4">
-                  <h5 className="font-medium text-gray-900 mb-2">Cloud Platforms</h5>
-                  <p className="text-xs text-gray-600">Microsoft Azure, AWS, Cloud-Native Architecture</p>
-                </div>
-                <div className="bg-gray-50 rounded-lg p-4">
-                  <h5 className="font-medium text-gray-900 mb-2">Enterprise Software</h5>
-                  <p className="text-xs text-gray-600">SAP, Salesforce, ServiceNow, Microsoft GP</p>
-                </div>
-                <div className="bg-gray-50 rounded-lg p-4">
-                  <h5 className="font-medium text-gray-900 mb-2">Cybersecurity</h5>
-                  <p className="text-xs text-gray-600">CISSP, NIST, SOC 2, ISO 27001, Zero Trust</p>
                 </div>
               </div>
             </div>
