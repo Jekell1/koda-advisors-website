@@ -20,7 +20,7 @@ const Header = () => {
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
             <Image 
-              src="/husky-logo.png" 
+              src="/husky-logo-2.png" 
               alt="Koda Advisors" 
               width={32}
               height={32}
