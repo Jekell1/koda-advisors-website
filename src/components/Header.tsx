@@ -218,17 +218,6 @@ const Header = () => {
               </a>
             </div>
           </div>
-          <div className="flex-shrink-0 py-3 relative z-10 bg-white">
-            <button
-              onClick={() => {
-                scrollToSection('contact')
-                setIsMenuOpen(false)
-              }}
-              className="btn-executive inline-flex items-center gap-2 w-full justify-center text-sm py-2 relative z-10"
-            >
-              Get Started
-            </button>
-          </div>
         </div>
       </div>
     </header>
