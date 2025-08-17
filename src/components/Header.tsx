@@ -23,7 +23,7 @@ const Header = () => {
         window.scrollTo({top: y, behavior: 'smooth'})
       } else if (sectionId === 'services') {
         // For main services section, scroll with negative offset
-        const yOffset = -250 // Negative offset for services section
+        const yOffset = -300 // Negative offset for services section
         const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset
         window.scrollTo({top: y, behavior: 'smooth'})
       } else if (sectionId === 'cybersecurity-risk-management' || sectionId === 'digital-transformation-leadership' || sectionId === 'ma-technology-due-diligence' || sectionId === 'it-optimization-cost-management') {
