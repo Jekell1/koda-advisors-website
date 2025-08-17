@@ -61,7 +61,7 @@ const Header = () => {
             <img 
               src="/husky-logo-png.png" 
               alt="Koda Advisors" 
-              className="relative transition-all duration-500 group-hover:scale-105 drop-shadow-2xl group-hover:drop-shadow-3xl filter group-hover:saturate-110 h-16 w-auto sm:h-20 md:h-24 lg:h-80 xl:h-96 lg:-mt-20 lg:-mb-20"
+              className="relative transition-all duration-500 group-hover:scale-105 drop-shadow-2xl group-hover:drop-shadow-3xl filter group-hover:saturate-110 h-28 w-auto sm:h-32 md:h-36 lg:h-80 xl:h-96 lg:-mt-20 lg:-mb-20"
             />
           </a>
         </div>
