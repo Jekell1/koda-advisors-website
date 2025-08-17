@@ -25,7 +25,7 @@ const Hero = () => {
       
       <div className="mx-auto max-w-7xl pt-32 pb-16 sm:pt-36 sm:pb-20 lg:pt-56 lg:pb-24">
         <div className="text-center">
-          <h1 className="font-heading text-4xl font-black tracking-tight text-steel-900 sm:text-6xl lg:text-7xl">
+          <h1 className="font-heading text-4xl font-black tracking-tight text-steel-900 sm:text-6xl lg:text-7xl pt-9">
             <span className="gradient-text">CIO Advisory & AI Transformation Partner</span>
           </h1>
           <p className="mt-6 text-xl leading-8 text-steel-600 font-bold">

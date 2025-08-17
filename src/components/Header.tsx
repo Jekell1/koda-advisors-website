@@ -11,7 +11,14 @@ const Header = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      if (sectionId === 'contact') {
+        // For contact section, scroll with additional offset
+        const yOffset = -200 // Extra offset for contact section
+        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset
+        window.scrollTo({top: y, behavior: 'smooth'})
+      } else {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }
       // Close mobile menu if open
       setIsMenuOpen(false)
       setIsServicesOpen(false)
@@ -46,37 +53,37 @@ const Header = () => {
   ]
 
   return (
-    <header className="fixed w-full bg-white/85 backdrop-blur-xl z-50 border-b border-gray-200/50 shadow-xl transition-all duration-300 h-16 lg:h-20">
+    <header className="fixed w-full bg-white/85 backdrop-blur-xl z-50 border-b border-gray-200/50 shadow-xl transition-all duration-300">
       {/* Animated flowing background */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-primary-100/30 via-steel-50/40 to-primary-100/30 animate-pulse"></div>
         <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-primary-500 to-transparent animate-flow"></div>
       </div>
       
-      <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 relative z-10 h-full">
-        <div className="flex lg:flex-1 overflow-visible">
-          <a href="#" className="-m-1.5 p-1.5 pl-0 -ml-12 group relative overflow-visible">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 relative z-10">
+        <div className="flex lg:flex-1 overflow-visible relative z-10">
+          <a href="#" className="-m-1.5 p-1.5 pl-4 group relative overflow-visible z-10">
             {/* Glowing effect behind logo */}
             <div className="absolute inset-0 bg-gradient-to-r from-primary-400/20 to-primary-600/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500 scale-110"></div>
             <img 
               src="/husky-logo-png.png" 
               alt="Koda Advisors" 
-              className="relative transition-all duration-500 group-hover:scale-105 drop-shadow-2xl group-hover:drop-shadow-3xl filter group-hover:saturate-110 h-40 w-auto sm:h-44 md:h-48 lg:h-80 xl:h-96 lg:-mt-20 lg:-mb-20 -mt-6 -mb-6"
+              className="relative transition-all duration-500 group-hover:scale-105 drop-shadow-2xl group-hover:drop-shadow-3xl filter group-hover:saturate-110 h-44 w-auto sm:h-48 md:h-52 lg:h-80 xl:h-96 lg:-mt-20 lg:-mb-20 -mt-4 -mb-4 z-10"
             />
           </a>
         </div>
         
-        <div className="flex lg:hidden">
+        <div className="flex lg:hidden relative z-20">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700 hover:bg-gradient-to-r hover:from-primary-50 hover:to-primary-100 hover:text-primary-600 transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105"
+            className="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700 hover:bg-gradient-to-r hover:from-primary-50 hover:to-primary-100 hover:text-primary-600 transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105 relative z-20"
             onClick={() => setIsMenuOpen(true)}
           >
             <Menu className="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
         
-        <div className="hidden lg:flex lg:gap-x-8 lg:mt-16">
+        <div className="hidden lg:flex lg:gap-x-8 mt-16">
           {navigation.map((item, index) => (
             <a
               key={item.name}
@@ -162,64 +169,65 @@ const Header = () => {
       </nav>
       {/* Mobile menu */}
       <div className={`lg:hidden ${isMenuOpen ? 'block' : 'hidden'}`}>
-        <div className="fixed inset-0 z-50" />
-        <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-          <div className="flex items-center justify-between">
+        <div className="fixed inset-0 z-50 bg-black bg-opacity-50" onClick={() => setIsMenuOpen(false)} />
+        <div className="fixed inset-y-0 right-0 z-50 w-full bg-white shadow-2xl px-4 py-2 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 flex flex-col max-h-screen" style={{zIndex: 9999}}>
+          <div className="flex items-center justify-between flex-shrink-0 py-2 bg-white">
             <a href="#" className="-m-1.5 p-1.5">
               <img 
-                src="/husky-logo.png" 
+                src="/husky-logo-png.png" 
                 alt="Koda Advisors" 
-                className="h-6 w-auto"
+                className="h-8 w-auto"
               />
             </a>
             <button
               type="button"
-              className="-m-2.5 rounded-md p-2.5 text-gray-700"
+              className="-m-2.5 rounded-md p-2.5 text-gray-700 relative z-10 bg-white"
               onClick={() => setIsMenuOpen(false)}
             >
-              <X className="h-6 w-6" aria-hidden="true" />
+              <X className="h-5 w-5" aria-hidden="true" />
             </button>
           </div>
-          <div className="mt-6 flow-root">
-            <div className="-my-6 divide-y divide-gray-500/10">
-              <div className="space-y-2 py-6">
-                {navigation.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="-mx-3 block rounded-lg px-3 py-3 text-xl font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {item.name}
-                  </a>
-                ))}
-                
-                {/* Mobile Services Section */}
-                <div className="-mx-3 block rounded-lg px-3 py-3">
-                  <div className="text-xl font-semibold leading-7 text-gray-900 mb-3">Services</div>
-                  <div className="space-y-2 pl-4">
-                    {services.map((service) => (
-                      <a
-                        key={service.name}
-                        href={service.href}
-                        className="block rounded-lg px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-primary-600"
-                        onClick={() => setIsMenuOpen(false)}
-                      >
-                        {service.name}
-                      </a>
-                    ))}
-                  </div>
-                </div>
-              </div>
-              <div className="py-6">
-                <button
-                  onClick={() => scrollToSection('contact')}
-                  className="btn-executive inline-flex items-center gap-2 w-full justify-center"
+          <div className="flex-1 flex flex-col justify-center -mt-4 relative z-10 bg-white">
+            <div className="space-y-1 bg-white px-2 py-4 rounded-lg">
+              {navigation.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="-mx-1 block rounded-lg px-3 py-2 text-lg font-semibold text-center text-gray-900 hover:bg-gray-100 relative z-10 bg-white"
+                  onClick={(e) => {
+                    e.preventDefault()
+                    scrollToSection(item.href.substring(1))
+                    setIsMenuOpen(false)
+                  }}
                 >
-                  Get Started
-                </button>
-              </div>
+                  {item.name}
+                </a>
+              ))}
+              
+              {/* Single Services Menu Item */}
+              <a
+                href="#services"
+                className="-mx-1 block rounded-lg px-3 py-2 text-lg font-semibold text-center text-gray-900 hover:bg-gray-100 relative z-10 bg-white"
+                onClick={(e) => {
+                  e.preventDefault()
+                  scrollToSection('services')
+                  setIsMenuOpen(false)
+                }}
+              >
+                Services
+              </a>
             </div>
+          </div>
+          <div className="flex-shrink-0 py-3 relative z-10 bg-white">
+            <button
+              onClick={() => {
+                scrollToSection('contact')
+                setIsMenuOpen(false)
+              }}
+              className="btn-executive inline-flex items-center gap-2 w-full justify-center text-sm py-2 relative z-10"
+            >
+              Get Started
+            </button>
           </div>
         </div>
       </div>

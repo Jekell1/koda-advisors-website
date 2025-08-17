@@ -65,7 +65,7 @@ const Contact = () => {
   return (
     <>
       <div className="wave-divider-blue"></div>
-      <section id="contact" className="pt-48 pb-24 bg-white scroll-mt-64">
+      <section id="contact" className="pt-16 pb-24 bg-white scroll-mt-64">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-heading font-bold tracking-tight text-steel-900 sm:text-4xl">
