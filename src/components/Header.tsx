@@ -25,8 +25,8 @@ const Header = () => {
         const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset
         window.scrollTo({top: y, behavior: 'smooth'})
       } else if (sectionId === 'services') {
-        // Mobile: -300px, Desktop: -350px
-        const yOffset = isMobile ? -300 : -350
+        // Mobile: -250px, Desktop: -350px
+        const yOffset = isMobile ? -250 : -350
         const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset
         window.scrollTo({top: y, behavior: 'smooth'})
       } else if (sectionId === 'cybersecurity-risk-management' || sectionId === 'digital-transformation-leadership' || sectionId === 'ma-technology-due-diligence' || sectionId === 'it-optimization-cost-management') {
