@@ -16,6 +16,16 @@ const Header = () => {
         const yOffset = -200 // Extra offset for contact section
         const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset
         window.scrollTo({top: y, behavior: 'smooth'})
+      } else if (sectionId === 'services') {
+        // For services section, scroll with additional offset to show full header
+        const yOffset = -120 // Extra offset for services section
+        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset
+        window.scrollTo({top: y, behavior: 'smooth'})
+      } else if (sectionId === 'about') {
+        // For about section, scroll with additional offset to show full header
+        const yOffset = -120 // Extra offset for about section
+        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset
+        window.scrollTo({top: y, behavior: 'smooth'})
       } else {
         element.scrollIntoView({ behavior: 'smooth', block: 'start' })
       }
@@ -57,7 +67,6 @@ const Header = () => {
       {/* Animated flowing background */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-primary-100/30 via-steel-50/40 to-primary-100/30 animate-pulse"></div>
-        <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-primary-500 to-transparent animate-flow"></div>
       </div>
       
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 relative z-10">
@@ -170,35 +179,37 @@ const Header = () => {
       {/* Mobile menu */}
       <div className={`lg:hidden ${isMenuOpen ? 'block' : 'hidden'}`}>
         <div className="fixed inset-0 z-50 bg-black bg-opacity-50" onClick={() => setIsMenuOpen(false)} />
-        <div className="fixed inset-y-0 right-0 z-50 w-full bg-white shadow-2xl px-4 py-2 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 flex flex-col max-h-screen" style={{zIndex: 9999}}>
-          <div className="flex items-center justify-between flex-shrink-0 py-2 bg-white">
-            <a href="#" className="-m-1.5 p-1.5">
+        <div className="fixed inset-y-0 right-0 z-50 w-full bg-white shadow-2xl px-4 py-2 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 flex flex-col max-h-screen transform-gpu perspective-1000 shadow-[0_20px_50px_rgba(8,_112,_184,_0.15)] border-l-4 border-primary-500" style={{zIndex: 9999, transform: 'translateZ(0) rotateY(-2deg)', transformStyle: 'preserve-3d', boxShadow: '20px 0 40px rgba(0,0,0,0.1), inset -5px 0 20px rgba(59,130,246,0.05)'}}>
+          <div className="flex items-center justify-between flex-shrink-0 py-2 bg-white transform-gpu" style={{transform: 'translateZ(10px)'}}>
+            <a href="#" className="-m-1.5 p-1.5 transform-gpu hover:scale-105 transition-transform duration-200" style={{transform: 'translateZ(15px)'}}>
               <img 
                 src="/husky-logo-png.png" 
                 alt="Koda Advisors" 
-                className="h-8 w-auto"
+                className="h-8 w-auto drop-shadow-md"
               />
             </a>
             <button
               type="button"
-              className="-m-2.5 rounded-md p-2.5 text-gray-700 relative z-10 bg-white"
+              className="-m-2.5 rounded-md p-2.5 text-gray-700 relative z-10 bg-white transform-gpu hover:scale-110 transition-all duration-200 shadow-md hover:shadow-lg"
               onClick={() => setIsMenuOpen(false)}
+              style={{transform: 'translateZ(20px)'}}
             >
               <X className="h-5 w-5" aria-hidden="true" />
             </button>
           </div>
-          <div className="flex-1 flex flex-col justify-center -mt-4 relative z-10 bg-white">
-            <div className="space-y-1 bg-white px-2 py-4 rounded-lg">
-              {navigation.map((item) => (
+          <div className="flex-1 flex flex-col justify-center -mt-4 relative z-10 bg-white transform-gpu" style={{transform: 'translateZ(5px)'}}>
+            <div className="space-y-1 bg-white px-2 py-4 rounded-lg shadow-inner">
+              {navigation.map((item, index) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="-mx-1 block rounded-lg px-3 py-2 text-lg font-semibold text-center text-gray-900 hover:bg-gray-100 relative z-10 bg-white"
+                  className="-mx-1 block rounded-lg px-3 py-2 text-lg font-semibold text-center text-gray-900 hover:bg-gray-100 relative z-10 bg-white transform-gpu hover:scale-105 hover:shadow-md transition-all duration-200 hover:bg-gradient-to-r hover:from-primary-50 hover:to-blue-50"
                   onClick={(e) => {
                     e.preventDefault()
                     scrollToSection(item.href.substring(1))
                     setIsMenuOpen(false)
                   }}
+                  style={{transform: `translateZ(${10 + index * 2}px)`, animationDelay: `${index * 50}ms`}}
                 >
                   {item.name}
                 </a>
@@ -207,12 +218,13 @@ const Header = () => {
               {/* Single Services Menu Item */}
               <a
                 href="#services"
-                className="-mx-1 block rounded-lg px-3 py-2 text-lg font-semibold text-center text-gray-900 hover:bg-gray-100 relative z-10 bg-white"
+                className="-mx-1 block rounded-lg px-3 py-2 text-lg font-semibold text-center text-gray-900 hover:bg-gray-100 relative z-10 bg-white transform-gpu hover:scale-105 hover:shadow-md transition-all duration-200 hover:bg-gradient-to-r hover:from-primary-50 hover:to-blue-50"
                 onClick={(e) => {
                   e.preventDefault()
                   scrollToSection('services')
                   setIsMenuOpen(false)
                 }}
+                style={{transform: 'translateZ(18px)'}}
               >
                 Services
               </a>
