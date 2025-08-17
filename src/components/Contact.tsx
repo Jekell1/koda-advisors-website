@@ -65,7 +65,7 @@ const Contact = () => {
   return (
     <>
       <div className="wave-divider-blue"></div>
-      <section id="contact" className="py-24 bg-white scroll-mt-64">
+      <section id="contact" className="pt-48 pb-24 bg-white scroll-mt-64">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-heading font-bold tracking-tight text-steel-900 sm:text-4xl">
@@ -76,6 +76,9 @@ const Contact = () => {
               technology leadership your organization needs to thrive.
             </p>
           </div>
+          
+          {/* Hidden anchor for smooth navigation positioned before contact info */}
+          <div id="contact-form" style={{ position: 'relative', top: '50px' }}></div>
           
           <div className="mx-auto mt-20 grid max-w-lg grid-cols-1 gap-x-8 gap-y-6 lg:max-w-none lg:grid-cols-2">
             {/* Contact Information */}

@@ -26,13 +26,11 @@ const Hero = () => {
       <div className="mx-auto max-w-7xl pt-32 pb-16 sm:pt-48 sm:pb-20 lg:pt-56 lg:pb-24">
         <div className="text-center">
           <h1 className="font-heading text-4xl font-black tracking-tight text-steel-900 sm:text-6xl lg:text-7xl">
-            <span className="gradient-text">Fractional CIO & AI Transformation Partner</span>
-            <br />
-            <span className="font-body-medium text-steel-700">for Growth-Minded Enterprises</span>
+            <span className="gradient-text">CIO Advisory & AI Transformation Partner</span>
           </h1>
-          <p className="mt-6 text-lg leading-8 text-steel-600 font-body-medium">
-            Strategic technology leadership without the overhead. I help $10M+ enterprises 
-            accelerate growth through AI transformation, digital excellence, and fractional CIO expertise.
+          <p className="mt-6 text-xl leading-8 text-steel-600 font-bold">
+            Strategic technology leadership without the overhead. We help $10M+ enterprises 
+            accelerate growth through AI transformation, digital excellence, and CIO expertise.
           </p>
           
           {/* Enhanced CTA */}
@@ -61,7 +59,7 @@ const Hero = () => {
                   <Shield className="h-5 w-5 text-white" />
                 </div>
               </div>
-              <dd className="text-3xl font-black tracking-tight text-steel-900 font-heading mb-2">$50M+</dd>
+              <dd className="text-3xl font-black tracking-tight text-steel-900 font-heading mb-2 flex items-center justify-center" style={{lineHeight: '1.2', minHeight: '2.5rem'}}>$300M+</dd>
               <dt className="text-base leading-7 text-steel-600 font-body-medium">Portfolio Value Protected</dt>
             </div>
             <div className="relative flex flex-col items-center justify-center text-center rounded-2xl bg-gradient-to-br from-white via-white to-gray-50 px-6 py-8 shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-gray-200/50 hover:shadow-[0_20px_40px_rgb(0,0,0,0.15)] hover:-translate-y-1 transition-all duration-300 backdrop-blur-sm">
@@ -70,7 +68,7 @@ const Hero = () => {
                   <Bot className="h-5 w-5 text-white" />
                 </div>
               </div>
-              <dd className="text-3xl font-black tracking-tight text-steel-900 font-heading mb-2">40+</dd>
+              <dd className="text-3xl font-black tracking-tight text-steel-900 font-heading mb-2 flex items-center justify-center" style={{lineHeight: '1.2', minHeight: '2.5rem'}}>40+</dd>
               <dt className="text-base leading-7 text-steel-600 font-body-medium">AI Implementations</dt>
             </div>
             <div className="relative flex flex-col items-center justify-center text-center rounded-2xl bg-gradient-to-br from-white via-white to-gray-50 px-6 py-8 shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-gray-200/50 hover:shadow-[0_20px_40px_rgb(0,0,0,0.15)] hover:-translate-y-1 transition-all duration-300 backdrop-blur-sm">
@@ -79,7 +77,7 @@ const Hero = () => {
                   <Zap className="h-5 w-5 text-white" />
                 </div>
               </div>
-              <dd className="text-3xl font-black tracking-tight text-steel-900 font-heading mb-2">25+</dd>
+              <dd className="text-3xl font-black tracking-tight text-steel-900 font-heading mb-2 flex items-center justify-center" style={{lineHeight: '1.2', minHeight: '2.5rem'}}>25+</dd>
               <dt className="text-base leading-7 text-steel-600 font-body-medium">Digital Transformations</dt>
             </div>
             <div className="relative flex flex-col items-center justify-center text-center rounded-2xl bg-gradient-to-br from-white via-white to-gray-50 px-6 py-8 shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-gray-200/50 hover:shadow-[0_20px_40px_rgb(0,0,0,0.15)] hover:-translate-y-1 transition-all duration-300 backdrop-blur-sm">
@@ -88,7 +86,7 @@ const Hero = () => {
                   <Users className="h-5 w-5 text-white" />
                 </div>
               </div>
-              <dd className="text-3xl font-black tracking-tight text-steel-900 font-heading mb-2">15+</dd>
+              <dd className="text-3xl font-black tracking-tight text-steel-900 font-heading mb-2 flex items-center justify-center" style={{lineHeight: '1.2', minHeight: '2.5rem'}}>15+</dd>
               <dt className="text-base leading-7 text-steel-600 font-body-medium">Years Experience</dt>
             </div>
           </dl>

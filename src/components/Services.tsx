@@ -116,7 +116,7 @@ const Services = () => {
                   className="flex flex-col rounded-2xl bg-executive-card p-8 shadow-executive ring-1 ring-steel-200 hover:shadow-executive-hover transition-all group"
                 >
                   <div className="flex items-center gap-x-4">
-                    <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-accent group-hover:scale-110 transition-transform">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-slate-600 to-slate-700 group-hover:scale-110 transition-transform shadow-[0_8px_25px_rgba(71,85,105,0.3)]">
                       <IconComponent className="h-8 w-8 text-white" />
                     </div>
                     <h3 className="text-xl font-heading font-semibold leading-8 text-steel-900">
@@ -129,7 +129,7 @@ const Services = () => {
                   <ul className="mt-6 space-y-3">
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex gap-x-3">
-                        <ArrowRight className="mt-1 h-4 w-4 flex-none text-primary-600" />
+                        <ArrowRight className="mt-1 h-4 w-4 flex-none text-slate-600" />
                         <span className="text-sm leading-6 text-steel-600 font-body">{feature}</span>
                       </li>
                     ))}

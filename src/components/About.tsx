@@ -130,7 +130,7 @@ const About = () => {
                 <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-steel-600 lg:max-w-none font-body">
                   <div className="relative pl-9">
                     <dt className="inline font-heading font-semibold text-steel-900">
-                      <CheckCircle className="absolute left-1 top-1 h-5 w-5 text-primary-600" />
+                      <CheckCircle className="absolute left-1 top-1 h-5 w-5 text-slate-600" />
                       Fractional CIO Model.
                     </dt>
                     <dd className="inline">
@@ -139,7 +139,7 @@ const About = () => {
                   </div>
                   <div className="relative pl-9">
                     <dt className="inline font-heading font-semibold text-steel-900">
-                      <CheckCircle className="absolute left-1 top-1 h-5 w-5 text-primary-600" />
+                      <CheckCircle className="absolute left-1 top-1 h-5 w-5 text-slate-600" />
                       Industry Expertise.
                     </dt>
                     <dd className="inline">
@@ -148,7 +148,7 @@ const About = () => {
                   </div>
                   <div className="relative pl-9">
                     <dt className="inline font-heading font-semibold text-steel-900">
-                      <CheckCircle className="absolute left-1 top-1 h-5 w-5 text-primary-600" />
+                      <CheckCircle className="absolute left-1 top-1 h-5 w-5 text-slate-600" />
                       Measurable Outcomes.
                     </dt>
                     <dd className="inline">
@@ -167,7 +167,7 @@ const About = () => {
                       key={index}
                       className="flex flex-col items-center text-center p-6 bg-executive-card rounded-2xl shadow-executive border border-steel-200 hover:shadow-executive-hover transition-all group"
                     >
-                      <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-accent mb-4 group-hover:scale-110 transition-transform">
+                      <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-slate-600 to-slate-700 mb-4 group-hover:scale-110 transition-transform shadow-[0_8px_25px_rgba(71,85,105,0.3)]">
                         <IconComponent className="h-8 w-8 text-white" />
                       </div>
                       <h3 className="text-lg font-heading font-semibold text-steel-900 mb-2">

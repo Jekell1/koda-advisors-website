@@ -46,72 +46,104 @@ const Header = () => {
   ]
 
   return (
-    <header className="fixed w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100">
-      <nav className="mx-auto flex max-w-7xl items-end justify-between p-6 lg:px-8">
+    <header className="fixed w-full bg-white/85 backdrop-blur-xl z-50 border-b border-gray-200/50 shadow-xl transition-all duration-300">
+      {/* Animated flowing background */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary-100/30 via-steel-50/40 to-primary-100/30 animate-pulse"></div>
+        <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-primary-500 to-transparent animate-flow"></div>
+      </div>
+      
+      <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 relative z-10">
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
+          <a href="#" className="-m-1.5 p-1.5 pl-0 -ml-12 group relative">
+            {/* Glowing effect behind logo */}
+            <div className="absolute inset-0 bg-gradient-to-r from-primary-400/20 to-primary-600/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500 scale-110"></div>
             <img 
-              src="/Koda_Advisors_Logo.svg" 
+              src="/husky-logo-png.png" 
               alt="Koda Advisors" 
-              style={{ height: '200px', width: 'auto' }}
+              style={{ height: '351px', width: 'auto', marginTop: '-85px', marginBottom: '-85px' }}
+              className="relative transition-all duration-500 group-hover:scale-105 drop-shadow-2xl group-hover:drop-shadow-3xl filter group-hover:saturate-110"
             />
           </a>
         </div>
+        
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+            className="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700 hover:bg-gradient-to-r hover:from-primary-50 hover:to-primary-100 hover:text-primary-600 transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105"
             onClick={() => setIsMenuOpen(true)}
           >
             <Menu className="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
-        <div className="hidden lg:flex lg:gap-x-12 mb-8">
-          {navigation.map((item) => (
+        
+        <div className="hidden lg:flex lg:gap-x-8 mt-16">
+          {navigation.map((item, index) => (
             <a
               key={item.name}
               href={item.href}
-              className="text-xl font-semibold leading-6 text-gray-900 hover:text-primary-600 transition-colors"
+              className="relative text-xl font-semibold leading-6 text-gray-900 hover:text-primary-600 transition-all duration-300 group px-4 py-3 rounded-xl hover:bg-gradient-to-r hover:from-primary-50/80 hover:to-steel-50/80 transform hover:scale-105 hover:shadow-lg"
+              style={{ animationDelay: `${index * 100}ms` }}
             >
-              {item.name}
+              <span className="relative z-10">{item.name}</span>
+              {/* Animated underline */}
+              <span className="absolute inset-x-2 -bottom-1 h-1 bg-gradient-to-r from-primary-500 to-primary-600 rounded-full scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left shadow-lg"></span>
+              {/* Hover glow effect */}
+              <span className="absolute inset-0 bg-gradient-to-r from-primary-400/10 to-primary-600/10 rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-300 blur-sm"></span>
             </a>
           ))}
           
-          {/* Services Dropdown */}
+          {/* Enhanced Services Dropdown */}
           <div className="relative" ref={servicesRef}>
             <button
               type="button"
-              className="flex items-center gap-x-1 text-xl font-semibold leading-6 text-gray-900 hover:text-primary-600 transition-colors"
+              className="flex items-center gap-x-2 text-xl font-semibold leading-6 text-gray-900 hover:text-primary-600 transition-all duration-300 group px-4 py-3 rounded-xl hover:bg-gradient-to-r hover:from-primary-50/80 hover:to-steel-50/80 transform hover:scale-105 hover:shadow-lg relative"
               onClick={() => setIsServicesOpen(!isServicesOpen)}
             >
-              Services
-              <ChevronDown className={`h-5 w-5 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
+              <span className="relative z-10">Services</span>
+              <ChevronDown className={`h-5 w-5 transition-all duration-400 ${isServicesOpen ? 'rotate-180 text-slate-600' : ''} group-hover:text-slate-600`} />
+              {/* Animated underline */}
+              <span className="absolute inset-x-2 -bottom-1 h-1 bg-gradient-to-r from-primary-500 to-primary-600 rounded-full scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left shadow-lg"></span>
+              {/* Hover glow effect */}
+              <span className="absolute inset-0 bg-gradient-to-r from-primary-400/10 to-primary-600/10 rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-300 blur-sm"></span>
             </button>
 
             {isServicesOpen && (
-              <div className="absolute top-full left-0 mt-3 w-80 rounded-xl bg-white shadow-lg ring-1 ring-black/5 z-50">
-                <div className="p-4">
-                  {services.map((service) => (
+              <div className="absolute top-full left-0 mt-4 w-80 rounded-2xl bg-white/95 backdrop-blur-xl shadow-2xl ring-1 ring-black/10 z-50 transform transition-all duration-300 animate-in slide-in-from-top-4 border border-gray-200/50">
+                {/* Gradient border effect */}
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary-500/20 via-transparent to-primary-500/20 p-[1px]">
+                  <div className="rounded-2xl bg-white/95 backdrop-blur-xl h-full w-full"></div>
+                </div>
+                <div className="relative p-6">
+                  {services.map((service, index) => (
                     <a
                       key={service.name}
                       href={service.href}
-                      className="group relative flex gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50 transition-colors"
+                      className="group relative flex gap-x-6 rounded-xl p-4 text-sm leading-6 hover:bg-gradient-to-r hover:from-primary-50/80 hover:to-steel-50/80 transition-all duration-300 transform hover:scale-[1.02] hover:shadow-md border border-transparent hover:border-primary-200/50"
                       onClick={() => setIsServicesOpen(false)}
+                      style={{ animationDelay: `${index * 75}ms` }}
                     >
-                      <div className="flex-auto">
-                        <div className="block font-semibold text-gray-900 group-hover:text-primary-600">
+                      {/* Service item glow effect */}
+                      <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-primary-500/5 to-primary-600/5 opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
+                      <div className="flex-auto relative z-10">
+                        <div className="block font-semibold text-gray-900 group-hover:text-primary-600 transition-colors duration-300">
                           {service.name}
                         </div>
-                        <p className="mt-1 text-gray-600">{service.description}</p>
+                        <p className="mt-1 text-gray-600 group-hover:text-gray-700 transition-colors duration-300">{service.description}</p>
+                      </div>
+                      {/* Arrow indicator */}
+                      <div className="flex items-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-[-10px] group-hover:translate-x-0">
+                        <ChevronDown className="h-4 w-4 text-slate-600 rotate-[-90deg]" />
                       </div>
                     </a>
                   ))}
-                  <div className="mt-4 pt-4 border-t border-gray-100">
+                  <div className="mt-6 pt-4 border-t border-gradient-to-r from-transparent via-gray-200 to-transparent">
                     <button
                       onClick={() => scrollToSection('services')}
-                      className="flex items-center justify-center rounded-lg bg-primary-600 px-4 py-2 text-sm font-semibold text-white hover:bg-primary-500 transition-colors w-full"
+                      className="flex items-center justify-center rounded-xl bg-gradient-to-r from-primary-600 to-primary-700 px-6 py-3 text-sm font-semibold text-white hover:from-primary-500 hover:to-primary-600 transition-all duration-300 w-full transform hover:scale-105 shadow-lg hover:shadow-xl relative overflow-hidden group"
                     >
-                      View All Services
+                      <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></span>
+                      <span className="relative">View All Services</span>
                     </button>
                   </div>
                 </div>
@@ -119,12 +151,13 @@ const Header = () => {
             )}
           </div>
         </div>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end mb-8">
+        
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end mt-16 -ml-8">
           <button
             onClick={() => scrollToSection('contact')}
-            className="rounded-md bg-primary-600 px-5 py-3.5 text-xl font-semibold text-white shadow-sm hover:bg-primary-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 transition-colors"
+            className="btn-executive inline-flex items-center gap-2"
           >
-            Get Started
+            <span className="relative font-bold tracking-wide">Get Started</span>
           </button>
         </div>
       </nav>
@@ -182,7 +215,7 @@ const Header = () => {
               <div className="py-6">
                 <button
                   onClick={() => scrollToSection('contact')}
-                  className="-mx-3 block rounded-lg px-3 py-3 text-xl font-semibold leading-7 text-primary-600 hover:bg-gray-50 w-full text-left"
+                  className="btn-executive inline-flex items-center gap-2 w-full justify-center"
                 >
                   Get Started
                 </button>

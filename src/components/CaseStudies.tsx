@@ -70,7 +70,7 @@ const CaseStudies = () => {
   return (
     <>
       <div className="wave-divider-steel"></div>
-      <section className="py-24 bg-steel-50 scroll-mt-64">
+      <section className="py-16 bg-steel-50 scroll-mt-64">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-heading font-bold tracking-tight text-steel-900 sm:text-4xl">
@@ -98,7 +98,7 @@ const CaseStudies = () => {
                   
                   {/* Icon and Metric */}
                   <div className="flex items-center gap-4 mb-6">
-                    <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-accent group-hover:scale-110 transition-transform">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-slate-600 to-slate-700 group-hover:scale-110 transition-transform shadow-[0_8px_25px_rgba(71,85,105,0.3)]">
                       <IconComponent className="h-8 w-8 text-white" />
                     </div>
                     <div className={`text-5xl font-heading font-bold ${colors.metric}`}>
