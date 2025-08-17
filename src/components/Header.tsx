@@ -46,22 +46,22 @@ const Header = () => {
   ]
 
   return (
-    <header className="fixed w-full bg-white/85 backdrop-blur-xl z-50 border-b border-gray-200/50 shadow-xl transition-all duration-300">
+    <header className="fixed w-full bg-white/85 backdrop-blur-xl z-50 border-b border-gray-200/50 shadow-xl transition-all duration-300 h-16 lg:h-20">
       {/* Animated flowing background */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-primary-100/30 via-steel-50/40 to-primary-100/30 animate-pulse"></div>
         <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-primary-500 to-transparent animate-flow"></div>
       </div>
       
-      <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 relative z-10">
-        <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5 pl-0 -ml-12 group relative">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 relative z-10 h-full">
+        <div className="flex lg:flex-1 overflow-visible">
+          <a href="#" className="-m-1.5 p-1.5 pl-0 -ml-12 group relative overflow-visible">
             {/* Glowing effect behind logo */}
             <div className="absolute inset-0 bg-gradient-to-r from-primary-400/20 to-primary-600/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500 scale-110"></div>
             <img 
               src="/husky-logo-png.png" 
               alt="Koda Advisors" 
-              className="relative transition-all duration-500 group-hover:scale-105 drop-shadow-2xl group-hover:drop-shadow-3xl filter group-hover:saturate-110 h-28 w-auto sm:h-32 md:h-36 lg:h-80 xl:h-96 lg:-mt-20 lg:-mb-20"
+              className="relative transition-all duration-500 group-hover:scale-105 drop-shadow-2xl group-hover:drop-shadow-3xl filter group-hover:saturate-110 h-40 w-auto sm:h-44 md:h-48 lg:h-80 xl:h-96 lg:-mt-20 lg:-mb-20 -mt-6 -mb-6"
             />
           </a>
         </div>
