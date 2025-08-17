@@ -23,9 +23,9 @@ const Hero = () => {
       {/* Circuit Pattern Overlay */}
       <div className="absolute inset-0 -z-5 bg-circuit-pattern opacity-30" style={{backgroundSize: '60px 60px'}}></div>
       
-      <div className="mx-auto max-w-7xl pt-40 pb-16 sm:pt-44 sm:pb-20 lg:pt-64 lg:pb-24">
+      <div className="mx-auto max-w-7xl pt-32 pb-16 sm:pt-36 sm:pb-20 lg:pt-56 lg:pb-24">
         <div className="text-center">
-          <h1 className="font-heading text-4xl font-black tracking-tight text-steel-900 sm:text-6xl lg:text-7xl pt-8 sm:pt-12 lg:pt-16">
+          <h1 className="font-heading text-4xl font-black tracking-tight text-steel-900 sm:text-6xl lg:text-7xl">
             <span className="gradient-text">CIO Advisory & AI Transformation Partner</span>
           </h1>
           <p className="mt-6 text-xl leading-8 text-steel-600 font-bold">
