@@ -18,12 +18,17 @@ const Header = () => {
         window.scrollTo({top: y, behavior: 'smooth'})
       } else if (sectionId === 'about') {
         // For about section, scroll down a little bit less
-        const yOffset = -200 // Larger negative offset for about section to scroll down less
+        const yOffset = -300 // Larger negative offset for about section to scroll down less
         const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset
         window.scrollTo({top: y, behavior: 'smooth'})
-      } else if (sectionId === 'services' || sectionId === 'cybersecurity-risk-management' || sectionId === 'digital-transformation-leadership' || sectionId === 'ma-technology-due-diligence' || sectionId === 'it-optimization-cost-management') {
-        // For services section and specific service cards, scroll with negative offset
-        const yOffset = -200 // Negative offset for services section
+      } else if (sectionId === 'services') {
+        // For main services section, scroll with negative offset
+        const yOffset = -250 // Negative offset for services section
+        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset
+        window.scrollTo({top: y, behavior: 'smooth'})
+      } else if (sectionId === 'cybersecurity-risk-management' || sectionId === 'digital-transformation-leadership' || sectionId === 'ma-technology-due-diligence' || sectionId === 'it-optimization-cost-management') {
+        // For individual service cards, scroll with more negative offset
+        const yOffset = -300 // More negative offset for individual service cards
         const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset
         window.scrollTo({top: y, behavior: 'smooth'})
       } else {
