@@ -14,7 +14,7 @@ const Hero = () => {
   }
 
   return (
-    <section id="home" className="relative isolate px-6 pt-14 lg:px-8 scroll-mt-64 hero-pattern">
+    <section id="home" className="relative isolate px-6 pt-14 lg:px-8 scroll-mt-20 lg:scroll-mt-64 hero-pattern">
       {/* Enhanced Background Elements */}
       <div className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
         <div className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-accent opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"></div>
@@ -23,7 +23,7 @@ const Hero = () => {
       {/* Circuit Pattern Overlay */}
       <div className="absolute inset-0 -z-5 bg-circuit-pattern opacity-30" style={{backgroundSize: '60px 60px'}}></div>
       
-      <div className="mx-auto max-w-7xl pt-32 pb-16 sm:pt-48 sm:pb-20 lg:pt-56 lg:pb-24">
+      <div className="mx-auto max-w-7xl pt-20 pb-16 sm:pt-24 sm:pb-20 lg:pt-56 lg:pb-24">
         <div className="text-center">
           <h1 className="font-heading text-4xl font-black tracking-tight text-steel-900 sm:text-6xl lg:text-7xl">
             <span className="gradient-text">CIO Advisory & AI Transformation Partner</span>

@@ -61,8 +61,7 @@ const Header = () => {
             <img 
               src="/husky-logo-png.png" 
               alt="Koda Advisors" 
-              style={{ height: '351px', width: 'auto', marginTop: '-85px', marginBottom: '-85px' }}
-              className="relative transition-all duration-500 group-hover:scale-105 drop-shadow-2xl group-hover:drop-shadow-3xl filter group-hover:saturate-110"
+              className="relative transition-all duration-500 group-hover:scale-105 drop-shadow-2xl group-hover:drop-shadow-3xl filter group-hover:saturate-110 h-16 w-auto sm:h-20 md:h-24 lg:h-80 xl:h-96 lg:-mt-20 lg:-mb-20"
             />
           </a>
         </div>
@@ -77,7 +76,7 @@ const Header = () => {
           </button>
         </div>
         
-        <div className="hidden lg:flex lg:gap-x-8 mt-16">
+        <div className="hidden lg:flex lg:gap-x-8 lg:mt-16">
           {navigation.map((item, index) => (
             <a
               key={item.name}
