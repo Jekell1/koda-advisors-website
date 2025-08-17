@@ -11,24 +11,27 @@ const Header = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
     if (element) {
+      // Check if mobile (screen width < 1024px, which is Tailwind's lg breakpoint)
+      const isMobile = window.innerWidth < 1024
+      
       if (sectionId === 'contact') {
-        // For contact section, scroll with additional offset
-        const yOffset = -250 // Extra offset for contact section
+        // Mobile: -150px, Desktop: -250px
+        const yOffset = isMobile ? -150 : -250
         const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset
         window.scrollTo({top: y, behavior: 'smooth'})
       } else if (sectionId === 'about') {
-        // For about section, scroll down a little bit less
-        const yOffset = -300 // Larger negative offset for about section to scroll down less
+        // Mobile: -200px, Desktop: -300px
+        const yOffset = isMobile ? -200 : -300
         const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset
         window.scrollTo({top: y, behavior: 'smooth'})
       } else if (sectionId === 'services') {
-        // For main services section, scroll with negative offset
-        const yOffset = -300 // Negative offset for services section
+        // Mobile: -300px, Desktop: -350px
+        const yOffset = isMobile ? -300 : -350
         const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset
         window.scrollTo({top: y, behavior: 'smooth'})
       } else if (sectionId === 'cybersecurity-risk-management' || sectionId === 'digital-transformation-leadership' || sectionId === 'ma-technology-due-diligence' || sectionId === 'it-optimization-cost-management') {
-        // For individual service cards, scroll with more negative offset
-        const yOffset = -300 // More negative offset for individual service cards
+        // Mobile: -300px, Desktop: -300px (keep same for individual services)
+        const yOffset = isMobile ? -300 : -300
         const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset
         window.scrollTo({top: y, behavior: 'smooth'})
       } else {

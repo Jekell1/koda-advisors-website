@@ -15,8 +15,10 @@ const Services = () => {
     const element = document.getElementById(sectionId)
     if (element) {
       if (sectionId === 'contact') {
-        // For contact section, use same offset as Header navigation
-        const yOffset = -250 // Same offset as Header component
+        // Check if mobile (screen width < 1024px, which is Tailwind's lg breakpoint)
+        const isMobile = window.innerWidth < 1024
+        // Mobile: -150px, Desktop: -250px for contact section
+        const yOffset = isMobile ? -150 : -250
         const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset
         window.scrollTo({top: y, behavior: 'smooth'})
       } else {
