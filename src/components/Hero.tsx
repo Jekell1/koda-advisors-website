@@ -7,7 +7,7 @@ const Hero = () => {
     console.log(`Scrolling to: ${sectionId}`)
     const element = document.getElementById(sectionId)
     if (element) {
-      const yOffset = -160 // Offset for fixed header
+      const yOffset = -250 // Offset for fixed header
       const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset
       window.scrollTo({top: y, behavior: 'smooth'})
     }
@@ -86,7 +86,7 @@ const Hero = () => {
                   <Users className="h-5 w-5 text-white" />
                 </div>
               </div>
-              <dd className="text-3xl font-black tracking-tight text-steel-900 font-heading mb-2 flex items-center justify-center" style={{lineHeight: '1.2', minHeight: '2.5rem'}}>15+</dd>
+              <dd className="text-3xl font-black tracking-tight text-steel-900 font-heading mb-2 flex items-center justify-center" style={{lineHeight: '1.2', minHeight: '2.5rem'}}>25+</dd>
               <dt className="text-base leading-7 text-steel-600 font-body-medium">Years Experience</dt>
             </div>
           </dl>

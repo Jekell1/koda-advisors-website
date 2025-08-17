@@ -6,7 +6,7 @@ const CaseStudies = () => {
   const caseStudies = [
     {
       icon: Bot,
-      metric: "50%",
+      metric: "100%",
       title: "AI Transformation with Measurable ROI",
       description: "Deployed enterprise AI solutions (chatbots, automation, executive AI analytics) that cut costs 50%, improved forecasting accuracy 20%, and scaled to thousands of secure users. Positions you as the partner who makes AI safe, strategic, and profitable.",
       category: "AI Implementation",
@@ -107,7 +107,7 @@ const CaseStudies = () => {
                   </div>
                   
                   {/* Content */}
-                  <h3 className="text-xl font-heading font-bold text-steel-900 mb-3 whitespace-nowrap">
+                  <h3 className="text-xl font-heading font-bold text-steel-900 mb-3">
                     {study.title}
                   </h3>
                   <p className="text-steel-700 leading-relaxed font-body text-justify">

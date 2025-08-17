@@ -2,7 +2,7 @@
 
 import { 
   Users, 
-  Brain, 
+  Bot, 
   Zap, 
   TrendingUp, 
   Shield, 
@@ -14,7 +14,14 @@ const Services = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      if (sectionId === 'contact') {
+        // For contact section, use same offset as Header navigation
+        const yOffset = -250 // Same offset as Header component
+        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset
+        window.scrollTo({top: y, behavior: 'smooth'})
+      } else {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }
     }
   }
 
@@ -32,7 +39,7 @@ const Services = () => {
       ]
     },
     {
-      icon: Brain,
+      icon: Bot,
       title: "AI Strategy & Implementation",
       description: "Help companies identify practical, high-value use cases for AI across operations, customer engagement, and decision-making. Design and implement AI roadmaps aligned with business goals.",
       features: [
@@ -113,6 +120,10 @@ const Services = () => {
               return (
                 <div
                   key={index}
+                  id={service.title === "Cybersecurity & Risk Management" ? "cybersecurity-risk-management" : 
+                      service.title === "Digital Transformation Leadership" ? "digital-transformation-leadership" :
+                      service.title === "M&A Technology Due Diligence & Integration" ? "ma-technology-due-diligence" :
+                      service.title === "IT Optimization & Cost Management" ? "it-optimization-cost-management" : undefined}
                   className="flex flex-col rounded-2xl bg-executive-card p-8 shadow-executive ring-1 ring-steel-200 hover:shadow-executive-hover transition-all group"
                 >
                   <div className="flex items-center gap-x-4">

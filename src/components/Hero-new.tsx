@@ -77,7 +77,7 @@ const Hero = () => {
                 </div>
               </div>
               <dt className="text-base leading-7 text-steel-600 font-body-medium mt-4">Years Experience</dt>
-              <dd className="order-first text-3xl font-black tracking-tight text-steel-900 font-heading">15+</dd>
+              <dd className="order-first text-3xl font-black tracking-tight text-steel-900 font-heading">25+</dd>
             </div>
           </dl>
         </div>
