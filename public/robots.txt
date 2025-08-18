@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://kodaadvisors.com/sitemap.xml
+Sitemap: https://koda-advisors.org/sitemap.xml
 
 # Crawl delay (optional - adjust as needed)
 Crawl-delay: 1

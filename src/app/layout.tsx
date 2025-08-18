@@ -14,13 +14,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://kodaadvisors.com',
+    url: 'https://koda-advisors.org',
     title: 'Koda Advisors - Fractional CIO & Technology Leadership',
     description: 'Executive-level technology leadership on a part-time or project basis. AI Strategy, Digital Transformation, M&A Due Diligence, Cybersecurity & IT Optimization.',
     siteName: 'Koda Advisors',
     images: [
       {
-        url: 'https://kodaadvisors.com/Koda_Advisors_Logo.svg',
+        url: 'https://koda-advisors.org/Koda_Advisors_Logo.svg',
         width: 800,
         height: 600,
         alt: 'Koda Advisors Logo',
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Koda Advisors - Fractional CIO & Technology Leadership',
     description: 'Executive-level technology leadership on a part-time or project basis. AI Strategy, Digital Transformation, M&A Due Diligence, Cybersecurity & IT Optimization.',
-    images: ['https://kodaadvisors.com/Koda_Advisors_Logo.svg'],
+    images: ['https://koda-advisors.org/Koda_Advisors_Logo.svg'],
   },
   robots: {
     index: true,
@@ -59,7 +59,7 @@ export default function RootLayout({
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/Koda_Advisors_Logo.svg" type="image/svg+xml" />
-        <link rel="canonical" href="https://kodaadvisors.com" />
+        <link rel="canonical" href="https://koda-advisors.org" />
         
         {/* JSON-LD Structured Data */}
         <script
@@ -70,14 +70,14 @@ export default function RootLayout({
               "@type": "ProfessionalService",
               "name": "Koda Advisors",
               "description": "Executive-level technology leadership on a part-time or project basis. AI Strategy, Digital Transformation, M&A Due Diligence, Cybersecurity & IT Optimization.",
-              "url": "https://kodaadvisors.com",
-              "logo": "https://kodaadvisors.com/Koda_Advisors_Logo.svg",
+              "url": "https://koda-advisors.org",
+              "logo": "https://koda-advisors.org/Koda_Advisors_Logo.svg",
               "serviceType": ["Fractional CIO", "Technology Leadership", "AI Strategy", "Digital Transformation", "Cybersecurity"],
               "areaServed": "Worldwide",
               "contactPoint": {
                 "@type": "ContactPoint",
                 "contactType": "business",
-                "email": "info@kodaadvisors.com"
+                "email": "info@koda-advisors.org"
               }
             })
           }}
