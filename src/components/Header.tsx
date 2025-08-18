@@ -73,10 +73,10 @@ const Header = () => {
   ]
 
   return (
-    <header className="fixed w-full bg-white/85 backdrop-blur-xl z-50 border-b border-gray-200/50 shadow-xl transition-all duration-300">
-      {/* Animated flowing background */}
+    <header className="fixed w-full bg-gradient-to-r from-white via-gray-200 to-gray-600 backdrop-blur-xl z-50 border-b border-gray-400/50 shadow-2xl transition-all duration-300">
+      {/* Animated flowing background overlay */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary-100/30 via-steel-50/40 to-primary-100/30 animate-pulse"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-white/20 via-gray-100/30 to-gray-500/20 animate-pulse"></div>
       </div>
       
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 relative z-10">
@@ -95,7 +95,7 @@ const Header = () => {
         <div className="flex lg:hidden relative z-20">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-xl p-3 text-gray-800 bg-white border-2 border-gray-300 hover:bg-gradient-to-r hover:from-primary-50 hover:to-primary-100 hover:text-primary-600 hover:border-primary-500 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-110 relative z-20"
+            className="-m-2.5 inline-flex items-center justify-center rounded-xl p-3 text-gray-700 bg-white border-2 border-gray-300 hover:bg-gradient-to-r hover:from-blue-50 hover:to-gray-100 hover:text-blue-600 hover:border-blue-400 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-110 relative z-20"
             onClick={() => setIsMenuOpen(true)}
           >
             <Menu className="h-7 w-7" aria-hidden="true" />
@@ -107,7 +107,7 @@ const Header = () => {
             <a
               key={item.name}
               href={item.href}
-              className="relative text-xl font-semibold leading-6 text-gray-900 hover:text-primary-600 transition-all duration-300 group px-4 py-3 rounded-xl hover:bg-gradient-to-r hover:from-primary-50/80 hover:to-steel-50/80 transform hover:scale-105 hover:shadow-lg"
+              className="relative text-xl font-semibold leading-6 text-gray-800 hover:text-blue-600 transition-all duration-300 group px-4 py-3 rounded-xl hover:bg-gradient-to-r hover:from-blue-50/80 hover:to-gray-100/80 transform hover:scale-105 hover:shadow-lg"
               style={{ animationDelay: `${index * 100}ms` }}
               onClick={(e) => {
                 e.preventDefault()
@@ -116,9 +116,9 @@ const Header = () => {
             >
               <span className="relative z-10">{item.name}</span>
               {/* Animated underline */}
-              <span className="absolute inset-x-2 -bottom-1 h-1 bg-gradient-to-r from-primary-500 to-primary-600 rounded-full scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left shadow-lg"></span>
+              <span className="absolute inset-x-2 -bottom-1 h-1 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left shadow-lg"></span>
               {/* Hover glow effect */}
-              <span className="absolute inset-0 bg-gradient-to-r from-primary-400/10 to-primary-600/10 rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-300 blur-sm"></span>
+              <span className="absolute inset-0 bg-gradient-to-r from-blue-400/10 to-blue-600/10 rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-300 blur-sm"></span>
             </a>
           ))}
           
@@ -126,15 +126,15 @@ const Header = () => {
           <div className="relative" ref={servicesRef}>
             <button
               type="button"
-              className="flex items-center gap-x-2 text-xl font-semibold leading-6 text-gray-900 hover:text-primary-600 transition-all duration-300 group px-4 py-3 rounded-xl hover:bg-gradient-to-r hover:from-primary-50/80 hover:to-steel-50/80 transform hover:scale-105 hover:shadow-lg relative"
+              className="flex items-center gap-x-2 text-xl font-semibold leading-6 text-gray-800 hover:text-blue-600 transition-all duration-300 group px-4 py-3 rounded-xl hover:bg-gradient-to-r hover:from-blue-50/80 hover:to-gray-100/80 transform hover:scale-105 hover:shadow-lg relative"
               onClick={() => setIsServicesOpen(!isServicesOpen)}
             >
               <span className="relative z-10">Services</span>
-              <ChevronDown className={`h-5 w-5 transition-all duration-400 ${isServicesOpen ? 'rotate-180 text-slate-600' : ''} group-hover:text-slate-600`} />
+              <ChevronDown className={`h-5 w-5 transition-all duration-400 ${isServicesOpen ? 'rotate-180 text-blue-600' : ''} group-hover:text-blue-600`} />
               {/* Animated underline */}
-              <span className="absolute inset-x-2 -bottom-1 h-1 bg-gradient-to-r from-primary-500 to-primary-600 rounded-full scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left shadow-lg"></span>
+              <span className="absolute inset-x-2 -bottom-1 h-1 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left shadow-lg"></span>
               {/* Hover glow effect */}
-              <span className="absolute inset-0 bg-gradient-to-r from-primary-400/10 to-primary-600/10 rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-300 blur-sm"></span>
+              <span className="absolute inset-0 bg-gradient-to-r from-blue-400/10 to-blue-600/10 rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-300 blur-sm"></span>
             </button>
 
             {isServicesOpen && (
