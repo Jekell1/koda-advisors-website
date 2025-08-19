@@ -105,7 +105,7 @@ const Services = () => {
   return (
     <>
       <div className="wave-divider-white"></div>
-      <section id="services" className="-mt-28 pb-24 bg-white scroll-mt-64">
+      <section id="services" className="-mt-4 pb-24 bg-white scroll-mt-64">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-heading font-bold tracking-tight text-steel-900 sm:text-4xl">
