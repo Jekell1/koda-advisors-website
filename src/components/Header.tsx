@@ -195,7 +195,7 @@ const Header = () => {
           </div>
         </div>
         
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end mt-16 -ml-8">
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end mt-16" style={{marginLeft: '-200px'}}>
           <button
             onClick={() => scrollToSection('contact')}
             className="btn-executive inline-flex items-center gap-2"
