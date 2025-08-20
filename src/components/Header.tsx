@@ -102,7 +102,7 @@ const Header = () => {
           </button>
         </div>
         
-        <div className="hidden lg:flex lg:gap-x-8 mt-16">
+        <div className="hidden lg:flex lg:gap-x-8 mt-16 ml-4">
           {navigation.map((item, index) => (
             <a
               key={item.name}
@@ -199,6 +199,7 @@ const Header = () => {
           <button
             onClick={() => scrollToSection('contact')}
             className="btn-executive inline-flex items-center gap-2"
+            style={{transform: 'translateX(-64px)'}}
           >
             <span className="relative font-bold tracking-wide">Get Started</span>
           </button>
