@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
-import { Menu, X, ChevronDown } from 'lucide-react'
+import { Menu, X, ChevronDown, Linkedin } from 'lucide-react'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -203,6 +203,17 @@ const Header = () => {
           >
             <span className="relative font-bold tracking-wide">Get Started</span>
           </button>
+          
+          {/* LinkedIn Icon */}
+          <a
+            href="https://www.linkedin.com/in/jeffchilders1/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ml-4 p-2 text-gray-700 hover:text-blue-600 transition-all duration-300 hover:bg-blue-50 rounded-lg hover:scale-110"
+            style={{transform: 'translateX(-64px)'}}
+          >
+            <Linkedin className="h-6 w-6" />
+          </a>
         </div>
       </nav>
       {/* Mobile menu */}
